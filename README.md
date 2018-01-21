@@ -17,8 +17,8 @@ Students must receive IRB certification for Social Behavioral Research. See: [in
 Slides
 ------
 
-1.  [Intro to quant](1-intro-to-quant.pdf)
-2.  [Variables](2-variables.pdf)
+1.  [Intro to quant](slides/1-intro-to-quant.pdf)
+2.  [Variables](slides/2-variables.pdf)
 
 Texts
 -----

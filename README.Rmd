@@ -12,8 +12,8 @@ View [the course syllabus](syllabus/syllabus.md) or download the [pdf](syllabus/
 Students must receive IRB certification for Social Behavioral Research. See: [instructions for completing IRB training](irb_training/instructions.md).
 
 ## Slides
-1. [Intro to quant](1-intro-to-quant.pdf)
-2. [Variables](2-variables.pdf)
+1. [Intro to quant](slides/1-intro-to-quant.pdf)
+2. [Variables](slides/2-variables.pdf)
 
 ## Texts
 - [*Mass Media Research: An Introduction*](https://www.amazon.com/dp/143908274X/) by Roger D. Wimmer and Joseph R. Dominick. [See chapter outline](books/mass_media_outline.md)
