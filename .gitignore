@@ -2,3 +2,4 @@ books/mass_media_research_an_introduction.pdf
 make
 make.R
 resources/**
+.Rproj.user
