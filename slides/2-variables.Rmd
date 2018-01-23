@@ -23,6 +23,33 @@ knitr::opts_chunk$set(collapse = TRUE, size = "\\scriptsize")
 - Research should be reproducible
 - Knowledge is cumulative and provisional
 
+# Sampling
+
+## Random sample
+
+- Technically, it should be a "uniform" random sample
+- Everyone in a sampling frame (all possible data points) has an equal probability of being selected
+- Best method for making inferences but expensive and difficult to do
+
+## Quasi-random sample
+
+- Samples that use mathematical rules but lack access to the full population
+- One common technique is **probability matching**, which is when you match the demographics in a sample with the desired population
+
+## Snowball sample
+
+- When you use one to recruit more into the sample
+- Not very representative, but useful for getting access to niche or hard-to-reach groups
+
+## Convenience sample
+
+- A sample that is not random but selected largely due to convenience (low cost, ease of access, etc.)
+
+## Why care about sampling?
+
+- The sampling method and study design has a direct effect on one's ability to make **inferences** from data
+- **Inferences** are conclusions drawn from a sample and applied to a population
+
 # Variables
 
 ## Variable
@@ -42,39 +69,74 @@ knitr::opts_chunk$set(collapse = TRUE, size = "\\scriptsize")
 - Different levels of measurement enable different levels of analysis
 
 ## Levels of measurement
-- Nominal
-- Ordinal
-- Interval
-- Ratio
+- **Nominal**: values represent different categories [or named things]
+- **Ordinal**: values represent meaningful sequence
+- **Interval**: values represent meaningful sequence using equi-distant intervals
+- **Ratio**: values represent real numbers
 
-## Ratio/numeric/interval
+## Nominal
+Values represent different categories [or named things]
 
-Numeric variables are [or represent] real numbers.
+- Can be used to operationalize anything
+- This is often done using *dummy codes*
+
+
+## Ordinal
+Values represent meaningful sequence
+
+- The order people finish in a race
+- The distance from 1st to 2nd can vary wildly with the distance from 2nd to 3rd
+
+## Interval
+Values represent meaningful sequence using equi-distant intervals
+
+- Likert-type items, e.g., *I always make my bed in the morning: Strongly Agree... Strongly Disagree* and other survey items that measure a range of feelings/attitudes using numbers
+- This is why the visual representation of numbers on a survey is often important
+
+
+## Ratio 
+Values represent real numbers
+
+- Numbers correspond to some non-arbitrary meaning.
+- A true 0 (zero) exists
+
+## Temperature
+**Do the statements below add up?**
+
+- The temperature today is 30 degrees Fahrenheit
+- The temperature yesterday is 60 degrees Fahrenheit
+- Yesterday was twice as hot as tomorrow
+
+## Numeric
+
+- In R, we will refer to **continuous** interval and ratio variables as `numeric` values.
+- Values are continuous if they don't only exist as discrete units
 
 ```{r}
-foo <- function(x) {
-  rnorm(x)
-}
-foo(5)
-class(c(1.25, 3.5, 4))
+x <- c(1.25, 3.5, 4)
+class(x)
 ```
 
-> Technically, if there's a true zero, then it's considered "ratio". Otherwise, it's "interval".
+## Integer
 
-## Ordinal/integer
-
-Ordinal variables are a meaningful sequence of integers.
+- In R, we will refer to **discrete** numbers as `integer` values.
 
 ```{r}
-class(1:3)
+x <- c(1, 2, 3)
+class(x)
 ```
 
 ## Categorical/character
 
-Categorical variables are used to represent nominal-level categories.
+- I will tend to refer to nominal variables as categorical variables
+- Categorical variables are represented in R as `character` and `factor` variables
 
 ```{r}
-class(c('a', 'b', 'c'))
+x <- c('a', 'b', 'c')
+class(x)
+
+x <- as.factor(x)
+class(x)
 ```
 
 
@@ -96,6 +158,147 @@ Define the word size
 
 - **Size** refers to the dimensions of an object
 
-## Class 1
+## Two classes
 
-## Class 2
+Let's say we want to find the size of two classes
+
+- **CLASS 1**: 20x20 room with 5 students
+- **CLASS 2**: 10x10 room with 10 students 
+
+## Defining "class size"
+
+- **CLASS 1**: 20x20 room with 5 students
+- **CLASS 2**: 10x10 room with 10 students 
+- If we define the size of a class in terms of physical space, class 1 is bigger
+- If we define the size of a class in terms of number of students, class 2 is bigger
+- It's even possible to define class in terms of mass of students
+
+Is any definition right or wrong?
+
+
+## Practice
+
+- Let's practice conceptually and operationally defining variables
+
+
+## Media exposure
+
+- Conceptual definition:
+- Operational definition:
+
+## Views on climate change
+
+- Conceptual definition:
+- Operational definition:
+
+## Coverage of environmental issues
+
+- Conceptual definition:
+- Operational definition:
+
+## Accuracy in reporting
+
+- Conceptual definition:
+- Operational definition:
+
+## Fake news
+
+- Conceptual definition:
+- Operational definition:
+
+## Social media use
+
+- Conceptual definition:
+- Operational definition:
+
+## Political ideology
+
+- Conceptual definition:
+- Operational definition:
+
+## Perceived role of journalists
+
+- Conceptual definition:
+- Operational definition:
+
+# Independent and dependent variables
+
+## Classifying variables
+
+- Variables can be classified according to their status in a theoretical and/or statistical model
+- There are several different labels applied toward this end, but for the most part they all do the same thing
+- Variables that represent the *cause*
+- Variables that represent the *effect*
+
+## Terminology
+
+- The cause is the **independent** variable
+- The effect is the **dependent** variable
+- There's also exogeneous and endogenous, predictors and outcomes, and probably some other synonyms
+
+## Cause isn't always cause
+
+- Although we use the cause/effect heuristic when modeling the relationship between two variables, we usually acknowledge multiple and/or reinforcing causes or some underlying "root cause"
+- As long as we all know that, the cause/effect heuristic is still helpful for organizing our theoretical and statistical models
+
+## Practice
+
+- Let's practice identifying independent and dependent variables
+
+## Independent or dependent?
+
+- Sun
+- Surface temperature
+
+## Independent or dependent?
+
+- Reading
+- Knowledge
+
+## Independent or dependent?
+
+- Public perceptions of an event
+- Reporting information about an event
+
+## Independent or dependent?
+
+- Breakfast
+- Health
+
+## Independent or dependent?
+
+- Exercise
+- Health
+
+## Independent or dependent?
+
+- Social media
+- Face-to-face interaction
+
+
+# Hypotheses/research questions
+
+## Relationships between variables
+
+- Research questions ask about the relationship between two or more variables
+    - These questions can guess direction (e.g., positive vs negative) but that kind of defeats the purpose
+- Hypotheses predict the relationship between two or more variables
+    - Hypotheses can either predict **whether** there is a relationship or what **direction** the relationship is in
+
+## RQ/H
+
+- Use research questions when there isn't a lot of research in an area and the theory isn't clear about what to expect
+- Otherwise, use hypotheses
+
+# Research designs
+
+## Overview of study designs
+
+- Surveys
+- Experiments
+- Content/text analysis
+
+## Next week
+
+- Survey research with Dr. Ben Warner from Communication Department
+- Make sure you've completed your IRB training
