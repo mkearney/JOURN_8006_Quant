@@ -103,27 +103,38 @@ Values represent real numbers
 ## Temperature
 **Do the statements below add up?**
 
-- The temperature today is 30 degrees Fahrenheit
-- The temperature yesterday is 60 degrees Fahrenheit
-- Yesterday was twice as hot as tomorrow
+- The temperature today is 100 degrees Fahrenheit
+- The temperature yesterday was 50 degrees Fahrenheit
+- Today is twice as hot as yesterday
 
-## Numeric
+## Celsius
+**Do the statements below add up?**
 
-- In R, we will refer to **continuous** interval and ratio variables as `numeric` values.
-- Values are continuous if they don't only exist as discrete units
+- The temperature today is 38 degrees Celsius
+- The temperature yesterday was 10 degrees Celsius
+- Today is twice as hot as yesterday
 
+## Kelvin
+**Do the statements below add up?**
+
+- The temperature today is 311 degrees Celsius
+- The temperature yesterday was 283 degrees Kelvin
+- Today is twice as hot as yesterday
+
+## Actual temperature ratios
+**Fahrenheit** 
 ```{r}
-x <- c(1.25, 3.5, 4)
-class(x)
+100/50
 ```
 
-## Integer
-
-- In R, we will refer to **discrete** numbers as `integer` values.
-
+**Celcius**
 ```{r}
-x <- c(1, 2, 3)
-class(x)
+38/10
+```
+
+**Kelvin**
+```{r}
+311/283
 ```
 
 ## Categorical/character
@@ -136,6 +147,31 @@ x <- c('a', 'b', 'c')
 class(x)
 
 x <- as.factor(x)
+class(x)
+```
+
+## Integer
+
+- In R, we will refer to **discrete** numbers as `integer` values.
+
+```{r}
+## R assumes numbers are continuous (numeric)
+x <- c(1, 2, 3)
+class(x)
+
+## use "L" after whole numbers to indicate integer
+x <- c(1L, 2L, 3L)
+class(x)
+```
+
+
+## Numeric
+
+- In R, we will refer to **continuous** interval and ratio variables as `numeric` values.
+- Values are continuous if they don't only exist as discrete units
+
+```{r}
+x <- c(1.25, -3.5, 4)
 class(x)
 ```
 
@@ -155,26 +191,29 @@ class(x)
 - Let's walk through an example of defining variable(s) and thinking about it in more practical terms
 
 
-## Size
+## Class size
 
-Define the word size
+Define the construct *class size*
 
-- **Size** refers to the dimensions of an object
+- **Class size** refers to the...
+    - Physical dimensions of the classroom
+    - The number of students
+    - The mass of the students
 
-## Two classes
+## Comparing classes sizes
 
-Let's say we want to find the size of two classes
+Let's say we want to compare two observed class sizes
 
-- **CLASS 1**: 20x20 room with 5 students
-- **CLASS 2**: 10x10 room with 10 students 
+- **CLASS 1**: 30' x 30' room with 5 students weighing 1500 total lbs
+- **CLASS 2**: 20' x 20' room with 10 students weighing 1250 total lbs
 
 ## Defining "class size"
 
-- **CLASS 1**: 20x20 room with 5 students
-- **CLASS 2**: 10x10 room with 10 students 
-- If we define the size of a class in terms of physical space, class 1 is bigger
-- If we define the size of a class in terms of number of students, class 2 is bigger
-- It's even possible to define class in terms of mass of students
+- **CLASS 1**: 30' x 30' room with 5 students weighing 1500 total lbs
+- **CLASS 2**: 20' x 20' room with 10 students weighing 1250 total lbs
+- If we define class size **physical space**, class 1 is biggest
+- If we define class size as **number of students**, class 2 is biggest
+- If we define class size as **mass of students**, class 1 is biggest
 
 Is any definition right or wrong?
 
@@ -182,7 +221,6 @@ Is any definition right or wrong?
 ## Practice
 
 - Let's practice conceptually and operationally defining variables
-
 
 ## Media exposure
 
@@ -230,8 +268,8 @@ Is any definition right or wrong?
 
 - Variables can be classified according to their status in a theoretical and/or statistical model
 - There are several different labels applied toward this end, but for the most part they all do the same thing
-- Variables that represent the *cause*
-- Variables that represent the *effect*
+    - Variables that represent the *cause*
+    - Variables that represent the *effect*
 
 ## Terminology
 
@@ -241,8 +279,9 @@ Is any definition right or wrong?
 
 ## Cause isn't always cause
 
-- Although we use the cause/effect heuristic when modeling the relationship between two variables, we usually acknowledge multiple and/or reinforcing causes or some underlying "root cause"
+- Although we use the cause/effect heuristic when modeling the relationship between two variables, we usually acknowledge multiple, reinforcing, or some underlying "root" causes
 - As long as we all know that, the cause/effect heuristic is still helpful for organizing our theoretical and statistical models
+    - Bad reporting of scientific research happens when we take cause/effect terminology too literally
 
 ## Practice
 
@@ -284,14 +323,16 @@ Is any definition right or wrong?
 ## Relationships between variables
 
 - Research questions ask about the relationship between two or more variables
-    - These questions can guess direction (e.g., positive vs negative) but that kind of defeats the purpose
+    - These questions can guess direction (e.g., positive vs negative) but I think that kind of defeats the purpose
 - Hypotheses predict the relationship between two or more variables
     - Hypotheses can either predict **whether** there is a relationship or what **direction** the relationship is in
 
-## RQ/H
+> Hypotheses allow for more definitive inferences
 
-- Use research questions when there isn't a lot of research in an area and the theory isn't clear about what to expect
-- Otherwise, use hypotheses
+## RQs/Hs
+
+- Use **research questions** when there isn't a lot of research in an area and the theory isn't clear about what exactly to expect
+- Otherwise, use **hypotheses**
 
 # Research designs
 
