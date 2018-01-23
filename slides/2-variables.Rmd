@@ -150,7 +150,10 @@ class(x)
 
 - A description of a variable's **observable** meaning.
 
-# Example
+## Example
+
+- Let's walk through an example of defining variable(s) and thinking about it in more practical terms
+
 
 ## Size
 
