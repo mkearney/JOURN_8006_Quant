@@ -19,7 +19,7 @@ knitr::opts_chunk$set(collapse = TRUE, size = "\\scriptsize")
 ## Scientific method
 
 - Try to be "objective"
-- Theories should be [falsifiable](http://mikewk.com)
+- Theories should be falsifiable
 - Research should be reproducible
 - Knowledge is cumulative and provisional
 
