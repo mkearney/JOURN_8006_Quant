@@ -1,6 +1,6 @@
 ---
-title: "Journalism Studies Abstracts"
-subtitle: "subtitle"
+title: "Journalism Studies Articles"
+subtitle: "Abstracts"
 date: "`r Sys.Date()`"
 author: "Michael W. Kearney, PhD"
 institute: | 
