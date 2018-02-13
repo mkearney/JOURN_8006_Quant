@@ -1,0 +1,106 @@
+---
+title: "Week 5"
+subtitle: "Text Analysis"
+date: "`r Sys.Date()`"
+author: "Michael W. Kearney, PhD"
+institute: |
+  | School of Journalism
+  | Informatics Institute
+  | University of Missouri
+output: uslides::uslides_html
+---
+
+```{r setup, include=FALSE}
+```
+
+
+# Recap and overview
+
+## Research designs
+> + **Surveys**
+>     - Good snapshot; hard to get representative sample
+> + **Experiments**
+>     - Test for causality; limited to certain IVs
+> + **Content analysis**
+>     - Convert content to numeric data; labour intensive
+
+## Overview
++ **Text analysis** (computerized content analysis)
+    - Definition, uses, & limitations
+    - Steps to conducting text analysis
+    - Example/practice
+
+# Text analysis
+
+## Definition
+
+<p class="note">Text analysis is a method of studying and analyzing communication in a systematic, objective, quantitative, and **automated** for the purpose of measuring variables.</p>
+
+## Additional uses
+> 1. Analyzing large amounts of content (big data)
+> 1. Classifying content in realtime
+
+## Additional limitations
+> 1. Although predictable, computer algorithms are...dense. Unlike coders, they don't understand context unless programmed to.
+> 1. Garbage-in, garbage-out
+
+# Conducting text analysis
+  
+## Steps
+<div class="double">
+<p class="double-flow">
+> 1. Formulate RQ/H
+> 1. Define the universe/context
+> 1. Select sample from population
+> 1. Define unit of analysis
+> 1. Construct content categories
+> 1. Establish quantification system
+> 1. **Build algorithm(s)**
+> 1. Code content
+> 1. Analyze collected data
+> 1. Draw conclusions
+</p>
+</div>
+
+## 7. Building algorithms
++ Computerized content analysis replaces coders with machine-implemented alogrithms
++ Algorithms are built by making assumptions about categories/data
++ This is typically done in two ways
+    - Frequencies
+    - Dictionaries
+
+## Sentiment dictionaries
++ There are numerous sentiment dictionaries
+    - Stanford
+    - National Research Council (NRC)
+    - Syuzhet (Nebraska Literary Lab)
+
+## Example
++ Rotten tomatoe user reviews of Last JEDI
+
+## Most negative
+
+> What an absolute trainwreck of a movie. I don't even know where to begin. I've tried approaching this review several different ways, but I have so much to say that it feels like I'm writing a novel. This movie is a perfect example of poor writing and should be used in all scriptwriting classes to teach aspiring screenwriters what to avoid doing...Rian Johnson will forever be known to me as the man who ruined Star Wars.
+
+- Design J
+
+## Most positive
+
+> What a sad disappointment of a film! Star Wars offers such a rich palette with wildly creative possibilities for new film makers to take hold of and run with. It's steeped with a rich history built on some of best films ever created. It boasts some of the most beloved characters put to film...The future of Star Wars is dead for me. I own all of the previous films and we loved them. Some of them more than others but we liked or loved them all. This one, I don't wish to see it ever again."
+
+## 2nd most positive
+
+> The Last Jedi is the best Star Wars film since Empire Strikes Back. The film took bold risks and introduced unique ideas and concepts to break the mold, while still feeling like a Star Wars film true to heart. The way the film sent Luke off couldn't have been any more perfect, and his character arc was the best right next to Rey's and Kylo Ren's...The so called fans who are hating this have no idea what they are talking about, nor are they open minded enough to embrace new ideas."
+
+## [img/rtsent.png](img/rtsent.png)
+
+## [img/rtmethods.png](img/rtmethods.png)
+
+## Practice
+
+<style>
+img {width: 80%;
+height: auto;
+margin-left: 10%;
+}
+</style>
