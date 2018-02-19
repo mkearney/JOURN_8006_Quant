@@ -5,6 +5,8 @@ output: html_document
 
 ## Download R
 
+**R** is the language/environment (the engine).
+
 1. Go to the CRAN (Collective R Archive Network) website: [https://cran.r-project.org/](https://cran.r-project.org/)
 
 2. Click on the appropriate operating system (Mac or Windows) to navigate to download page.
@@ -16,6 +18,8 @@ output: html_document
 
 ## Download Rstudio
 
+**Rstudio** is the graphical user interface (GUI) that makes it easy to use R. Once both R and Rstudio are installed, you can ignore R and only open/use Rstudio moving forward (Rstudio will use R, but you won't have to interact with it directly).
+
 1. Go to the free download location on Rstudio's website: [https://www.rstudio.com/products/rstudio/download/#download](https://www.rstudio.com/products/rstudio/download/#download)
 
 2. Select one of the highlighted options that corresponds with your computer's operating system (Mac or PC)
@@ -25,8 +29,7 @@ output: html_document
 
 ## Using R/Rstudio
 
-**R** is the language/environment (the engine).
+Double click "Rstudio," which should be found in your applications/programs folder.
 
-**Rstudio** is the graphpical user interface (GUI) that makes it easy to use R.
 
-Once both are installed, you can ignore R and only open/use Rstudio moving forward (Rstudio will use R, but you won't have to interact with it directly).
+
