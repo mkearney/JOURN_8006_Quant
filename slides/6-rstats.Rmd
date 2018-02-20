@@ -1,0 +1,127 @@
+---
+title: "Week 6"
+subtitle: "\\#rstats"
+date: "`r Sys.Date()`"
+author: "Michael W. Kearney, PhD"
+institute: |
+  | School of Journalism
+  | Informatics Institute
+  | University of Missouri
+output: uslides::uslides_html
+---
+
+
+# Recap and overview
+
+## Research designs
+> + **Surveys**
+>     - Good snapshot; hard to get representative sample
+> + **Experiments**
+>     - Test for causality; limited to certain IVs
+> + **Content analysis**
+>     - Convert content to numeric data; labour intensive
+> + **Text analysis**
+
+## Due today
++ Submit the current research question/hypothesis (can be plural) of your thesis/project
+
+## Overview
++ **#rstats**: the R environment
+    - What is R?
+    - Why R?
+    - How does one use R?
++ Some computing **basics**
+    - File/directory awareness
+    - Be kind to future you
++ Workshop/live R demo
+
+# What is R?
+
+## R
++ R is an **environment**
+    - An interactive programming language
+    - Integrates easily with other languages (c, c++, etc.)
++ The letter **R**
+    - R was derived from the S language
+    - It's an R-bitrary name
+
+# Why R?
+
+## R is gReat!
+
++ R is **open source**
+    - It's free and available to the public
+    - It's maintained by a group of benevolent super nerds
++ R is **flexible**
+    - Academic origins have expanded to modern/practical applications
+    - One of the two major data science languages
+
+## Alternatives to R
++ Historically, this class features **SPSS**
+    - SPSS is powerful and seemingly easy to use 
+    - No scripting/coding required
++ There are downsides to SPSS, too
+    - There are **too many** options to remember
+    - Program defaults not always best
+    - Data wrangling and non-statistical tasks remain tedious!
+    - It costs lots of money!
+
+# How does one use R?
+
+## Installing R
+**SEE: Instructions on Canvas**
+
++ R comes packaged with a GUI (graphical user interface), but **Rstudio** is a friendlier GUI
++ So, install R (the engine) but **use** Rstudio (the interface)
+
+## Rstudio
+
++ Rstudio is a graphical interface (GUI) for R that offers numerous user-friendly features and makes using R a breeze
++ Rstudio is developed by people at the cutting edge of data science, but it's mostly designed for people who don't use R every day
+
+# Computing basics
+
+## File/directory awareness
+- Every computer has a file/directory system
+- There's a default or home folder
+    - On PCs this might be the "C" folder. On Macs, this is your username.
+- It's organized like a tree
+    - You can move from one branch to another
+    - Moving from one folder to another is a linear process–meaning, you can go forward and backward
+
+## Don't fall asleep yet!
+- Why do you need to know about your computer's file directory system?
+- Because you need to know where things are (i.e., data and script files) to interact with them
+
+## tl;dr
+- Open your file browser. See how the files are organized? Yeah? Good!
+
+## Don't let these terms confuse you
+- `File` is the **name**/location of a file
+- `Path` is the name/**location** of a file
+- `Folder` is the **name**/location of a file folder
+- `Directory` is the name/**location** of a file folder
+
+<p class="note">file == path & folder == directory</p>
+
+# Be kind to future you
+
+## The goldeR rule
+
+> do unto others as you would have them do unto you
+
++ Do unto your future self way better than that!
+
+## FutuRe you
+
++ Using scripts and writing clear code will make your life easier
++ It's like writing down a routine of pointing and clicking that you don't have to memorize
++ The internet is full of routines/scripts that you can edit and customize to your liking
++ With some notes and some extra attention paid to make sure things are clear, future you will be very happy with current you!
+
+# Live R demo
+
++ Download R/Rstudio
++ Open Rstudio
+
+

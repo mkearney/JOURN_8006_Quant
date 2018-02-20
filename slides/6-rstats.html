@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 6</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto:700|Roboto+Condensed:400,400i,700,700i" rel="stylesheet"> -->
+  <link rel="stylesheet" href="6-rstats_files/resources/node_modules/shower-ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="6-rstats_files/resources/style-ribbon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  <script src="6-rstats_files/resources/auto-render.min.js" type="text/javascript"></script>
+  
+  
+  
+  
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>Week 6</h1>
+    <p>#rstats</p>
+  </header>
+
+  <section class="slide level1 titlepage titleslide">
+    <h2>Week 6</h2>
+    <h2>#rstats</h2>
+    <h3>Michael W. Kearney, PhD <br> </h3>
+    <h3><div style="white-space: pre-line;">School of Journalism
+Informatics Institute
+University of Missouri</div></h3>
+  </section>
+
+  
+<section id="recap-and-overview" class="titleslide slide level1"><h2 class="shout">Recap and overview</h2></section><section id="research-designs" class="slide level2">
+<h2>Research designs</h2>
+<ul>
+<li class="fragment next"><strong>Surveys</strong>
+<ul>
+<li class="fragment next">Good snapshot; hard to get representative sample</li>
+</ul></li>
+<li class="fragment next"><strong>Experiments</strong>
+<ul>
+<li class="fragment next">Test for causality; limited to certain IVs</li>
+</ul></li>
+<li class="fragment next"><strong>Content analysis</strong>
+<ul>
+<li class="fragment next">Convert content to numeric data; labour intensive</li>
+</ul></li>
+<li class="fragment next"><strong>Text analysis</strong></li>
+</ul>
+</section><section id="due-today" class="slide level2">
+<h2>Due today</h2>
+<ul>
+<li>Submit the current research question/hypothesis (can be plural) of your thesis/project</li>
+</ul>
+</section><section id="overview" class="slide level2">
+<h2>Overview</h2>
+<ul>
+<li><strong>#rstats</strong>: the R environment
+<ul>
+<li>What is R?</li>
+<li>Why R?</li>
+<li>How does one use R?</li>
+</ul></li>
+<li>Some computing <strong>basics</strong>
+<ul>
+<li>File/directory awareness</li>
+<li>Be kind to future you</li>
+<li>Script vs. console</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-is-r" class="titleslide slide level1"><h2 class="shout">What is R?</h2></section><section id="r" class="slide level2">
+<h2>R</h2>
+<ul>
+<li>R is an <strong>environment</strong>
+<ul>
+<li>An interactive programming language</li>
+<li>Integrates easily with other languages (c, c++, etc.)</li>
+</ul></li>
+<li>The letter <strong>R</strong>
+<ul>
+<li>R was derived from the S language</li>
+<li>It’s an R-bitrary name</li>
+</ul></li>
+</ul>
+</section>
+<section id="why-r" class="titleslide slide level1"><h2 class="shout">Why R?</h2></section><section id="r-is-great" class="slide level2">
+<h2>R is gReat!</h2>
+<ul>
+<li>R is <strong>open source</strong>
+<ul>
+<li>It’s free and available to the public</li>
+<li>It’s maintained by a group of benevolent super nerds</li>
+</ul></li>
+<li>R is <strong>flexible</strong>
+<ul>
+<li>Academic origins have expanded to modern/practical applications</li>
+<li>One of the two major data science languages</li>
+</ul></li>
+</ul>
+</section><section id="alternatives-to-r" class="slide level2">
+<h2>Alternatives to R</h2>
+<ul>
+<li>Historically, this class features <strong>SPSS</strong>
+<ul>
+<li>SPSS is powerful and seemingly easy to use</li>
+<li>No scripting/coding required</li>
+</ul></li>
+<li>There are downsides to SPSS, too
+<ul>
+<li>There are <strong>too many</strong> options to remember</li>
+<li>Program defaults not always best</li>
+<li>Data wrangling and non-statistical tasks remain tedious!</li>
+<li>It costs lots of money!</li>
+</ul></li>
+</ul>
+</section>
+<section id="how-does-one-use-r" class="titleslide slide level1"><h2 class="shout">How does one use R?</h2></section><section id="installing-r" class="slide level2">
+<h2>Installing R</h2>
+<p><strong>SEE: Instructions on Canvas</strong></p>
+<ul>
+<li>R comes packaged with a GUI (graphical user interface), but <strong>Rstudio</strong> is a friendlier GUI</li>
+<li>So, install R (the engine) but <strong>use</strong> Rstudio (the interface)</li>
+</ul>
+</section><section id="rstudio" class="slide level2">
+<h2>Rstudio</h2>
+<ul>
+<li>Rstudio is a graphical interface (GUI) for R that offers numerous user-friendly features and makes using R a breeze</li>
+<li>Rstudio is developed by people at the cutting edge of data science, but it’s mostly designed for people who don’t use R every day</li>
+</ul>
+</section>
+<section id="computing-basics" class="titleslide slide level1"><h2 class="shout">Computing basics</h2></section><section id="filedirectory-awareness" class="slide level2">
+<h2>File/directory awareness</h2>
+<ul>
+<li>Every computer has a file/directory system</li>
+<li>There’s a default or home folder
+<ul>
+<li>On PCs this might be the “C” folder. On Macs, this is your username.</li>
+</ul></li>
+<li>It’s organized like a tree
+<ul>
+<li>You can move from one branch to another</li>
+<li>Moving from one folder to another is a linear process–meaning, you can go forward and backward</li>
+</ul></li>
+</ul>
+</section><section id="dont-fall-asleep-yet" class="slide level2">
+<h2>Don’t fall asleep yet!</h2>
+<ul>
+<li>Why do you need to know about your computer’s file directory system?</li>
+<li>Because you need to know where things are (i.e., data and script files) to interact with them</li>
+</ul>
+</section><section id="tldr" class="slide level2">
+<h2>tl;dr</h2>
+<ul>
+<li>Open your file browser. See how the files are organized? Yeah? Good!</li>
+</ul>
+</section><section id="dont-let-these-terms-confuse-you" class="slide level2">
+<h2>Don’t let these terms confuse you</h2>
+<ul>
+<li><code>File</code> is the <strong>name</strong>/location of a file</li>
+<li><code>Path</code> is the name/<strong>location</strong> of a file</li>
+<li><code>Folder</code> is the <strong>name</strong>/location of a file folder</li>
+<li><code>Directory</code> is the name/<strong>location</strong> of a file folder</li>
+</ul>
+<p class="note">
+file == path &amp; folder == directory
+</p>
+</section>
+<section id="be-kind-to-future-you" class="titleslide slide level1"><h2 class="shout">Be kind to future you</h2></section><section id="the-golder-rule" class="slide level2">
+<h2>The goldeR rule</h2>
+<blockquote>
+<p>do unto others as you would have them do unto you</p>
+</blockquote>
+<ul>
+<li>Do unto your future self way better than that!</li>
+</ul>
+</section><section id="future-you" class="slide level2">
+<h2>FutuRe you</h2>
+<ul>
+<li>Using scripts and writing clear code will make your life easier</li>
+<li>It’s like writing down a routine of pointing and clicking that you don’t have to memorize</li>
+<li>The internet is full of routines/scripts that you can edit and customize to your liking</li>
+<li>With some notes and some extra attention paid to make sure things are clear, future you will be happy with current you!</li>
+</ul>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="6-rstats_files/resources/node_modules/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+    <script>renderMathInElement(document.body);</script>
+  
+  
+</body>
+</html>
