@@ -28,7 +28,7 @@ body {
 <h1 id="r-basicshomework-1">R basics/Homework #1</h1>
 <p>JOURN 8006</p>
 <h2 id="values">Values</h2>
-<p>Values are data points. In the R environment, there are multiple types (classes) of values. To combine multiple values of the same class together, use the <code>c()</code> function. When values of different classes are combined together, they are coerced into the least restrictive class (so combine a numeric value with a character value will result in a character vector) multiple values same class together into a vector. Values of the same class can be combined together to form into a vector values of the same class using the <code>c()</code> function</p>
+<p>Values are data points. In the R environment, there are multiple types (classes) of values. To combine multiple values of the same class together, use the <code>c()</code> function. When values of different classes are combined together, they are coerced into the least restrictive class (so combining a numeric value with a character value will result in a character vector).</p>
 <h3 id="numeric-class">Numeric class</h3>
 <p>Numeric, or floating point, values are <strong>numeric</strong> (the class) objects.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## numeric value
@@ -133,8 +133,8 @@ x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot
 ## capitalize values in x
 <span class="kw">toupper</span>(x)
 <span class="op">&gt;</span><span class="st"> </span>[<span class="dv">1</span>] <span class="st">&quot;A&quot;</span> <span class="st">&quot;B&quot;</span> <span class="st">&quot;C&quot;</span></code></pre></div>
-<h2 id="vectors">Vectors</h2>
-<p>In computing, a <strong>scalar</strong> refers to a single value while a <strong>vector</strong> refers to a set of multiple values. R actually glosses over this distinction and instead treats everything as a vector. So, in R, a single numeric value and a set of 100 numeric values are both considered vectors.</p>
+<h2 id="a-quick-note-about-vectors">A quick note about &quot;vectors&quot;</h2>
+<p>In computing, a <strong>scalar</strong> refers to a single value while a <strong>vector</strong> refers to a set of multiple values. R actually ignores this distinction and instead treats everything as a vector. So, in R, a single numeric value and a set of 100 numeric values are both considered vectors.</p>
 <p id="section"></p>
 <h2 id="homework">Homework</h2>
 <p>For this homework assignment, create a new folder on your computer called <code>JOURN_8006_Quant</code>. Inside the this <code>JOURN_8006_Quant</code> folder, create a sub-folder called <code>homework</code>. In the homework folder, save the data file <code>1-basics-data.csv</code> and the homework script file <code>1-basics-script.R</code>. Once both files are saved, right-click the <code>1-script.R</code> file and open with Rstudio. Execute the code (a copy of the code is included below). Submit the output of the last three lines of code (the names of the variables, the number of rows, and the number of columns).</p>

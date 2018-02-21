@@ -5,7 +5,7 @@ JOURN 8006
 Values
 ------
 
-Values are data points. In the R environment, there are multiple types (classes) of values. To combine multiple values of the same class together, use the `c()` function. When values of different classes are combined together, they are coerced into the least restrictive class (so combine a numeric value with a character value will result in a character vector) multiple values same class together into a vector. Values of the same class can be combined together to form into a vector values of the same class using the `c()` function
+Values are data points. In the R environment, there are multiple types (classes) of values. To combine multiple values of the same class together, use the `c()` function. When values of different classes are combined together, they are coerced into the least restrictive class (so combining a numeric value with a character value will result in a character vector).
 
 ### Numeric class
 
@@ -141,10 +141,10 @@ toupper(x)
 > [1] "A" "B" "C"
 ```
 
-Vectors
--------
+A quick note about "vectors"
+----------------------------
 
-In computing, a **scalar** refers to a single value while a **vector** refers to a set of multiple values. R actually glosses over this distinction and instead treats everything as a vector. So, in R, a single numeric value and a set of 100 numeric values are both considered vectors.
+In computing, a **scalar** refers to a single value while a **vector** refers to a set of multiple values. R actually ignores this distinction and instead treats everything as a vector. So, in R, a single numeric value and a set of 100 numeric values are both considered vectors.
 
 ################################################################# 
 
