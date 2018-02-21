@@ -136,7 +136,7 @@ For this homework assignment, create a new folder on your computer called `JOURN
 
 ```{r, eval=FALSE}
 ## read data into R
-data <- read.csv("practice-data.csv")
+data <- read.csv("1-basics-data.csv")
 
 ## print first 6 rows in R
 head(data)
