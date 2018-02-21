@@ -151,7 +151,7 @@ In computing, a **scalar** refers to a single value while a **vector** refers to
 Homework
 --------
 
-For this homework assignment, create a new folder on your computer called `jouRn8000`. Inside the this `jouRn8006` folder, create a sub-folder called `homework`. In the homework folder, save the data file `1-practice-data.csv` and the homework script file `1-script.R`. Once both files are saved, right-click the `1-script.R` file and open with Rstudio. Execute the code (a copy of the code is included below). Submit the output of the last three lines of code (the names of the variables, the number of rows, and the number of columns).
+For this homework assignment, create a new folder on your computer called `JOURN_8006_Quant`. Inside the this `JOURN_8006_Quant` folder, create a sub-folder called `homework`. In the homework folder, save the data file `1-basics-data.csv` and the homework script file `1-basics-script.R`. Once both files are saved, right-click the `1-script.R` file and open with Rstudio. Execute the code (a copy of the code is included below). Submit the output of the last three lines of code (the names of the variables, the number of rows, and the number of columns).
 
 ``` r
 ## read data into R
