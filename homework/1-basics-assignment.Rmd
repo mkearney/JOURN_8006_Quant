@@ -142,7 +142,7 @@ data <- read.csv("1-basics-data.csv")
 head(data)
 
 ## change the names all lower case
-names(data) <- toupper(names(data))
+names(data) <- tolower(names(data))
 
 ## get a summary of the data
 summary(data)
