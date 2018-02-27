@@ -1,0 +1,276 @@
+---
+title: "Week 7"
+subtitle: "Descriptives"
+date: "`r Sys.Date()`"
+author: "Michael W. Kearney, PhD"
+institute: |
+  | School of Journalism
+  | Informatics Institute
+  | University of Missouri
+output: 
+  uslides::uslides_html:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = "#>")
+Sys.setenv(
+  USLIDES_BOTTOMLEFT = "uslidelogos/bl.jpg",
+  USLIDES_BOTTOMRIGHT = "uslidelogos/br.jpg",
+  USLIDES_BANNER = "uslidelogos/bn.jpg",
+  USLIDES_BACKGROUND = "uslidelogos/bg.jpg"
+)
+```
+
+<!-- ############################################# -->
+<!-- ##             RECAP/OVERVIEW              ## -->
+<!-- ############################################# -->
+
+# Recap and overview
+
+## #rstats
+> + **Software**
+>     - **R**: A statistical programming language
+>     - **Rstudio**: graphical interface (development environment)
+> + **R objects and classes**
+>     - Creating and overriding R objects
+>     - Classes: `numeric`, `integer`, `character`, `factor`, `data.frame`
+> + **R functions**
+>     - Named automated tasks used on data (e.g., `mean(x)`)
+
+## Due today
++ Upload output from Homework #1
+
+## Overview
++ **Descriptives**: summarizing data
+    - Measures of central tendency
+    - Measures of dispersions
++ Getting data *into* R
+    - Reading different types of data files
++ Descriptives in **R**
+    - Summary functions/packages and output
+
+
+<!-- ############################################# -->
+<!-- ##             DESCRIPTIVES                ## -->
+<!-- ############################################# -->
+
+# Descriptives
+
+## "Statistics"
++ **Descriptive** statistics (AKA *parametrics*)
+    - Describing the population of data
+    - Not a lot of probability theory required
++ **Inferential** statistics (AKA *statistics*)
+    - Describing the population using a sample of data
+    - Probability theory is key
+
+## Descriptive statistics
++ Measures of **central tendency**
+    - Describes the **middle** of the data
++ Measures of dispersion
+    - Describes the **spread** of the data
+
+## Central tendency
++ **Mean**: the expected value (often called "average")
++ **Median**: the mid-point of the data
++ **Mode**: the most common data point
+
+## Mean
++ Calculate the mean `mean()` by summing `sum()` all values and dividing `/` by the number of values `length()`
+
+```{r}
+## 10 numbers from random distribution with mean of 0
+x <- rnorm(10, mean = 0)
+
+## calculate mean
+sum(x) / length(x)
+
+## use mean function
+mean(x)
+```
+
+
+## Median
++ Calculate the median `median()` by arranging `sort()` all values and find the middle (or values *tied* for the middle) observation.
+
+```{r}
+## sort the numbers by magnitude
+x <- sort(x)
+
+## print and find the middle values (5th and 6th)
+x
+
+## use median function
+median(x)
+```
+
+
+## Mode
++ Calculate the mode by creating a frequency table `table()` and sorting `sort()` in descending order (biggest to smallest)
+
+```{r}
+## sample 100 values from the series of numbers 1:10 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+y <- sample(1:10, 100, replace = TRUE)
+
+## create frequency table
+y_freq <- table(y)
+
+## sort and print table
+sort(y_freq, decreasing = TRUE)
+```
+
+
+## Important R note
++ In R missing values are coded as `NA`
++ Inputs containing `NA` will return `NA` for these functions:
+    - `sum()`, `mean()`, `median()`, `min()`, `max()`, `range()`, `var()`, `sd()`
++ To avoid this, include the argument `na.rm = TRUE`
++ Although not always, this (ignoring missing values) is usually what you want to happen
+
+## `na.rm = TRUE`
++ Example of finding mean when `x` contains a missing value (`NA`)
+```{r}
+## add missing value ot x
+x <- c(NA, x)
+
+## returns NA
+mean(x)
+
+## returns the mean we want
+mean(x, na.rm = TRUE)
+```
+
+## Dispersion
++ **Range**: the minimum and maximum values. Often expressed as a distance between the two.
++ **Variance**: distance from the mean
++ **Standard deviation**: distance from the mean expressed in standardized units
+
+## Range
++ Calculate the range `range()` by finding the maximum `max()` and minimum `min()` values.
+
+```{r}
+## min and max values of y
+min(y)
+max(y)
+
+## calculate distance between the two
+max(y) - min(y)
+
+## use the range function
+range(y)
+```
+
+
+## Variance
++ Calculate the variance `var()` by summing `sum()` the squared `^2` distance `-` from the mean `mean()` and dividing `/` by the number of observations `length(x) - 1`
+
+```{r}
+## calculate variance
+sum((y - mean(y))^2) / (length(y) - 1)
+
+## use the var function
+var(y)
+```
+
+## Standard deviation
++ Calculate the standard deviation `sd()` by taking the square root `sqrt()` of the variance `var()`.
+
+```{r}
+## calculate variance
+yvar <- var(y)
+
+## square root of variance
+sqrt(yvar)
+
+## use sd function
+sd(y)
+```
+
+<!-- ############################################# -->
+<!-- ##         GETTING DATA INTO R             ## -->
+<!-- ############################################# -->
+
+# Getting data into R
+
+## CSV
++ **CSV**: comma separated value
+```{r}
+read.csv("data/csv.csv")
+```
+
+## \*SV/delimited
+```{r}
+## uncomment following line for help documentation
+#?read.table
+read.delim("data/tsv.tsv")
+```
+
+## dat
++ Wikipedia describes `.dat` as
+> not [a] specific file type, often generic extension for "data" files for a variety of applications
++ Often associated with Mplus (statistical software program)
++ See: \*SV methods, i.e., `read.table()`
+
+## xlsx (Excel)
+```{r}
+## install readxl package if not already
+if (!requireNamespace("readxl", quietly = TRUE)) {
+  install.packages("readxl")
+}
+## read an excel file
+readxl::read_excel("data/xlsx.xlsx")
+```
+
+## .sav (SPSS)
+```{r}
+## install readxl package if not already
+if (!requireNamespace("haven", quietly = TRUE)) {
+  install.packages("haven")
+}
+## read spss (sav) file
+haven::read_spss("data/sav.sav")
+```
+
+## dta (Stata)
+```{r}
+## install readxl package if not already
+if (!requireNamespace("haven", quietly = TRUE)) {
+  install.packages("haven")
+}
+## read stata (dta) file
+haven::read_stata("data/dta.dta")
+```
+
+## rds (R)
+```{r}
+readRDS("data/rds.rds")
+```
+
+<!-- ############################################# -->
+<!-- ##           DESCRIPTIVES IN R             ## -->
+<!-- ############################################# -->
+
+# Write up
+
+## Data
++ After data collection and prior to analysis, research projects should describe, or summarize, the data.
++ This should be included in the **methods** section of your paper
++ Descriptives in the data summary typically include the following
+    - Number of observations (total number `N = 345`)
+    - Demographic (age, sex, race, education, etc.) breakdowns (numbers and percents *15.3% were female* (`n = 23`))
+        - For age, usually a range and the mean
+    - Study variable information: min, max, mean, sd
+
+## Useful functions/packages
++ Fortunately, there are lots of good functions and packages to choose from
+    - `summary()` (base R)
+    - `describe()` from **{psych}**
+    - `skim()` from **{skimr}**
+    - `summarize()` from **{rockchalk}**
+
+
+```{r}
+```
+
+

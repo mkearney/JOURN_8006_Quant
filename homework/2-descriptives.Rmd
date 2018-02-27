@@ -1,0 +1,23 @@
+---
+title: "Descriptives/Homework #2"
+author: "JOURN 8006"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, collapse = TRUE, comment = ">")
+```
+
+## Homework \#2
+
+For this homework assignment, read in the `2-data.csv` data file (code provided below) and then complete the two prompts. Upload your .Rmd file to Canvas. once completed.
+
+```{r, eval=FALSE}
+## read data into R
+data <- read.csv("2-data.csv", stringsAsFactors = FALSE)
+
+## for the ID variable...how many people completed the survey twice?
+
+## what is the min, max, mean, and standard deviation of each variable
+```
+

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 7</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto:700|Roboto+Condensed:400,400i,700,700i" rel="stylesheet"> -->
+  <link rel="stylesheet" href="7-descriptives_files/resources/node_modules/shower-ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="7-descriptives_files/resources/style-ribbon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  <script src="7-descriptives_files/resources/auto-render.min.js" type="text/javascript"></script>
+  
+  
+    <style type="text/css">
+   div.sourceCode { overflow-x: auto; }
+   table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+     margin: 0; padding: 0; vertical-align: baseline; border: none; }
+   table.sourceCode { width: 100%; line-height: 100%; }
+   td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+   td.sourceCode { padding-left: 5px; }
+   code > span.kw { color: #0000ff; } /* Keyword */
+   code > span.ch { color: #008080; } /* Char */
+   code > span.st { color: #008080; } /* String */
+   code > span.co { color: #008000; } /* Comment */
+   code > span.ot { color: #ff4000; } /* Other */
+   code > span.al { color: #ff0000; } /* Alert */
+   code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+   code > span.wa { color: #008000; font-weight: bold; } /* Warning */
+   code > span.cn { } /* Constant */
+   code > span.sc { color: #008080; } /* SpecialChar */
+   code > span.vs { color: #008080; } /* VerbatimString */
+   code > span.ss { color: #008080; } /* SpecialString */
+   code > span.im { } /* Import */
+   code > span.va { } /* Variable */
+   code > span.cf { color: #0000ff; } /* ControlFlow */
+   code > span.op { } /* Operator */
+   code > span.bu { } /* BuiltIn */
+   code > span.ex { } /* Extension */
+   code > span.pp { color: #ff4000; } /* Preprocessor */
+   code > span.do { color: #008000; } /* Documentation */
+   code > span.an { color: #008000; } /* Annotation */
+   code > span.cv { color: #008000; } /* CommentVar */
+   code > span.at { } /* Attribute */
+   code > span.in { color: #008000; } /* Information */
+  </style>
+  
+  
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>Week 7</h1>
+    <p>Descriptives</p>
+  </header>
+
+  <section class="slide level1 titlepage titleslide">
+    <h2>Week 7</h2>
+    <h2>Descriptives</h2>
+    <h3>Michael W. Kearney, PhD <br> </h3>
+    <h3><div style="white-space: pre-line;">School of Journalism
+Informatics Institute
+University of Missouri</div></h3>
+  </section>
+
+  
+<section class="slide level2">
+
+<!-- ############################################# -->
+<!-- ##             RECAP/OVERVIEW              ## -->
+<!-- ############################################# -->
+</section>
+<section id="recap-and-overview" class="titleslide slide level1"><h2 class="shout">Recap and overview</h2></section><section id="rstats" class="slide level2">
+<h2>#rstats</h2>
+<ul>
+<li class="fragment next"><strong>Software</strong>
+<ul>
+<li class="fragment next"><strong>R</strong>: A statistical programming language</li>
+<li class="fragment next"><strong>Rstudio</strong>: graphical interface (development environment)</li>
+</ul></li>
+<li class="fragment next"><strong>R objects and classes</strong>
+<ul>
+<li class="fragment next">Creating and overriding R objects</li>
+<li class="fragment next">Classes: <code>numeric</code>, <code>integer</code>, <code>character</code>, <code>factor</code>, <code>data.frame</code></li>
+</ul></li>
+<li class="fragment next"><strong>R functions</strong>
+<ul>
+<li class="fragment next">Named automated tasks used on data (e.g., <code>mean(x)</code>)</li>
+</ul></li>
+</ul>
+</section><section id="due-today" class="slide level2">
+<h2>Due today</h2>
+<ul>
+<li>Upload output from Homework #1</li>
+</ul>
+</section><section id="overview" class="slide level2">
+<h2>Overview</h2>
+<ul>
+<li><strong>Descriptives</strong>: summarizing data
+<ul>
+<li>Measures of central tendency</li>
+<li>Measures of dispersions</li>
+</ul></li>
+<li>Getting data <em>into</em> R
+<ul>
+<li>Reading different types of data files</li>
+</ul></li>
+<li>Descriptives in <strong>R</strong>
+<ul>
+<li>Summary functions/packages and output</li>
+</ul></li>
+</ul>
+<!-- ############################################# -->
+<!-- ##             DESCRIPTIVES                ## -->
+<!-- ############################################# -->
+</section>
+<section id="descriptives" class="titleslide slide level1"><h2 class="shout">Descriptives</h2></section><section id="statistics" class="slide level2">
+<h2>“Statistics”</h2>
+<ul>
+<li><strong>Descriptive</strong> statistics (AKA <em>parametrics</em>)
+<ul>
+<li>Describing the population of data</li>
+<li>Not a lot of probability theory required</li>
+</ul></li>
+<li><strong>Inferential</strong> statistics (AKA <em>statistics</em>)
+<ul>
+<li>Describing the population using a sample of data</li>
+<li>Probability theory is key</li>
+</ul></li>
+</ul>
+</section><section id="descriptive-statistics" class="slide level2">
+<h2>Descriptive statistics</h2>
+<ul>
+<li>Measures of <strong>central tendency</strong>
+<ul>
+<li>Describes the <strong>middle</strong> of the data</li>
+</ul></li>
+<li>Measures of dispersion
+<ul>
+<li>Describes the <strong>spread</strong> of the data</li>
+</ul></li>
+</ul>
+</section><section id="central-tendency" class="slide level2">
+<h2>Central tendency</h2>
+<ul>
+<li><strong>Mean</strong>: the expected value (often called “average”)</li>
+<li><strong>Median</strong>: the mid-point of the data</li>
+<li><strong>Mode</strong>: the most common data point</li>
+</ul>
+</section><section id="mean" class="slide level2">
+<h2>Mean</h2>
+<ul>
+<li>Calculate the mean <code>mean()</code> by summing <code>sum()</code> all values and dividing <code>/</code> by the number of values <code>length()</code></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## 10 numbers from random distribution with mean of 0
+x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dt">mean =</span> <span class="dv">0</span>)
+
+## calculate mean
+<span class="kw">sum</span>(x) <span class="op">/</span><span class="st"> </span><span class="kw">length</span>(x)
+<span class="co">#&gt; [1] 0.649651</span>
+
+## use mean function
+<span class="kw">mean</span>(x)
+<span class="co">#&gt; [1] 0.649651</span></code></pre></div>
+</section><section id="median" class="slide level2">
+<h2>Median</h2>
+<ul>
+<li>Calculate the median <code>median()</code> by arranging <code>sort()</code> all values and find the middle (or values <em>tied</em> for the middle) observation.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## sort the numbers by magnitude
+x &lt;-<span class="st"> </span><span class="kw">sort</span>(x)
+
+## print and find the middle values (5th and 6th)
+x
+<span class="co">#&gt;  [1] -0.3732418  0.0716279  0.1008515  0.4217097  0.7278986  0.7352692</span>
+<span class="co">#&gt;  [7]  0.9510263  1.0252363  1.2456933  1.5904388</span>
+
+## use median function
+<span class="kw">median</span>(x)
+<span class="co">#&gt; [1] 0.7315839</span></code></pre></div>
+</section><section id="mode" class="slide level2">
+<h2>Mode</h2>
+<ul>
+<li>Calculate the mode by creating a frequency table <code>table()</code> and sorting <code>sort()</code> in descending order (biggest to smallest)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## sample 100 values from the series of numbers 1:10 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+y &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">100</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>)
+
+## create frequency table
+y_freq &lt;-<span class="st"> </span><span class="kw">table</span>(y)
+
+## sort and print table
+<span class="kw">sort</span>(y_freq, <span class="dt">decreasing =</span> <span class="ot">TRUE</span>)
+<span class="co">#&gt; y</span>
+<span class="co">#&gt;  4  6  3  7 10  8  9  1  2  5 </span>
+<span class="co">#&gt; 14 13 12 11 11  9  9  7  7  7</span></code></pre></div>
+</section><section id="important-r-note" class="slide level2">
+<h2>Important R note</h2>
+<ul>
+<li>In R missing values are coded as <code>NA</code></li>
+<li>Inputs containing <code>NA</code> will return <code>NA</code> for these functions:
+<ul>
+<li><code>sum()</code>, <code>mean()</code>, <code>median()</code>, <code>min()</code>, <code>max()</code>, <code>range()</code>, <code>var()</code>, <code>sd()</code></li>
+</ul></li>
+<li>To avoid this, include the argument <code>na.rm = TRUE</code></li>
+<li>Although not always, this (ignoring missing values) is usually what you want to happen</li>
+</ul>
+</section><section id="na.rm-true" class="slide level2">
+<h2><code>na.rm = TRUE</code></h2>
+<ul>
+<li>Example of finding mean when <code>x</code> contains a missing value (<code>NA</code>)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## add missing value ot x
+x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, x)
+
+## returns NA
+<span class="kw">mean</span>(x)
+<span class="co">#&gt; [1] NA</span>
+
+## returns the mean we want
+<span class="kw">mean</span>(x, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)
+<span class="co">#&gt; [1] 0.649651</span></code></pre></div>
+</section><section id="dispersion" class="slide level2">
+<h2>Dispersion</h2>
+<ul>
+<li><strong>Range</strong>: the minimum and maximum values. Often expressed as a distance between the two.</li>
+<li><strong>Variance</strong>: distance from the mean</li>
+<li><strong>Standard deviation</strong>: distance from the mean expressed in standardized units</li>
+</ul>
+</section><section id="range" class="slide level2">
+<h2>Range</h2>
+<ul>
+<li>Calculate the range <code>range()</code> by finding the maximum <code>max()</code> and minimum <code>min()</code> values.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## min and max values of y
+<span class="kw">min</span>(y)
+<span class="co">#&gt; [1] 1</span>
+<span class="kw">max</span>(y)
+<span class="co">#&gt; [1] 10</span>
+
+## calculate distance between the two
+<span class="kw">max</span>(y) <span class="op">-</span><span class="st"> </span><span class="kw">min</span>(y)
+<span class="co">#&gt; [1] 9</span>
+
+## use the range function
+<span class="kw">range</span>(y)
+<span class="co">#&gt; [1]  1 10</span></code></pre></div>
+</section><section id="variance" class="slide level2">
+<h2>Variance</h2>
+<ul>
+<li>Calculate the variance <code>var()</code> by summing <code>sum()</code> the squared <code>^2</code> distance <code>-</code> from the mean <code>mean()</code> and dividing <code>/</code> by the number of observations <code>length(x) - 1</code></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## calculate variance
+<span class="kw">sum</span>((y <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(y))<span class="op">^</span><span class="dv">2</span>) <span class="op">/</span><span class="st"> </span>(<span class="kw">length</span>(y) <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)
+<span class="co">#&gt; [1] 7.580202</span>
+
+## use the var function
+<span class="kw">var</span>(y)
+<span class="co">#&gt; [1] 7.580202</span></code></pre></div>
+</section><section id="standard-deviation" class="slide level2">
+<h2>Standard deviation</h2>
+<ul>
+<li>Calculate the standard deviation <code>sd()</code> by taking the square root <code>sqrt()</code> of the variance <code>var()</code>.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## calculate variance
+yvar &lt;-<span class="st"> </span><span class="kw">var</span>(y)
+
+## square root of variance
+<span class="kw">sqrt</span>(yvar)
+<span class="co">#&gt; [1] 2.753217</span>
+
+## use sd function
+<span class="kw">sd</span>(y)
+<span class="co">#&gt; [1] 2.753217</span></code></pre></div>
+<!-- ############################################# -->
+<!-- ##         GETTING DATA INTO R             ## -->
+<!-- ############################################# -->
+</section>
+<section id="getting-data-into-r" class="titleslide slide level1"><h2 class="shout">Getting data into R</h2></section><section id="csv" class="slide level2">
+<h2>CSV</h2>
+<ul>
+<li><strong>CSV</strong>: comma separated value</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read.csv</span>(<span class="st">&quot;data/csv.csv&quot;</span>)
+<span class="co">#&gt;   id   name amount</span>
+<span class="co">#&gt; 1  1  Alice    100</span>
+<span class="co">#&gt; 2  2    Bob    200</span></code></pre></div>
+</section><section id="svdelimited" class="slide level2">
+<h2>*SV/delimited</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## uncomment following line for help documentation
+<span class="co">#?read.table</span>
+<span class="kw">read.delim</span>(<span class="st">&quot;data/tsv.tsv&quot;</span>)
+<span class="co">#&gt;        x1   x2   x3 x4</span>
+<span class="co">#&gt; 1 234.000 10.0  1.5  a</span>
+<span class="co">#&gt; 2   0.234  3.0 15.0  b</span>
+<span class="co">#&gt; 3  -5.200 -5.3  0.0  c</span></code></pre></div>
+</section><section id="dat" class="slide level2">
+<h2>dat</h2>
+<ul>
+<li>Wikipedia describes <code>.dat</code> as &gt; not [a] specific file type, often generic extension for “data” files for a variety of applications</li>
+<li>Often associated with Mplus (statistical software program)</li>
+<li>See: *SV methods, i.e., <code>read.table()</code></li>
+</ul>
+</section><section id="xlsx-excel" class="slide level2">
+<h2>xlsx (Excel)</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## install readxl package if not already
+<span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&quot;readxl&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)) {
+  <span class="kw">install.packages</span>(<span class="st">&quot;readxl&quot;</span>)
+}
+## read an excel file
+readxl<span class="op">::</span><span class="kw">read_excel</span>(<span class="st">&quot;data/xlsx.xlsx&quot;</span>)
+<span class="co">#&gt; # A tibble: 4 x 2</span>
+<span class="co">#&gt;   name                 value    </span>
+<span class="co">#&gt;   &lt;chr&gt;                &lt;chr&gt;    </span>
+<span class="co">#&gt; 1 Name                 Clippy   </span>
+<span class="co">#&gt; 2 Species              paperclip</span>
+<span class="co">#&gt; 3 Approx date of death 39083    </span>
+<span class="co">#&gt; 4 Weight in grams      0.9</span></code></pre></div>
+</section><section id="sav-spss" class="slide level2">
+<h2>.sav (SPSS)</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## install readxl package if not already
+<span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&quot;haven&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)) {
+  <span class="kw">install.packages</span>(<span class="st">&quot;haven&quot;</span>)
+}
+## read spss (sav) file
+haven<span class="op">::</span><span class="kw">read_spss</span>(<span class="st">&quot;data/sav.sav&quot;</span>)
+<span class="co">#&gt; # A tibble: 32 x 2</span>
+<span class="co">#&gt;    toxin yield</span>
+<span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt;</span>
+<span class="co">#&gt;  1   11.    4.</span>
+<span class="co">#&gt;  2   19.    4.</span>
+<span class="co">#&gt;  3   13.    4.</span>
+<span class="co">#&gt;  4   13.    4.</span>
+<span class="co">#&gt;  5   12.    4.</span>
+<span class="co">#&gt;  6   17.    4.</span>
+<span class="co">#&gt;  7   13.    4.</span>
+<span class="co">#&gt;  8   18.    4.</span>
+<span class="co">#&gt;  9   18.    4.</span>
+<span class="co">#&gt; 10   17.    4.</span>
+<span class="co">#&gt; # ... with 22 more rows</span></code></pre></div>
+</section><section id="dta-stata" class="slide level2">
+<h2>dta (Stata)</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## install readxl package if not already
+<span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&quot;haven&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)) {
+  <span class="kw">install.packages</span>(<span class="st">&quot;haven&quot;</span>)
+}
+## read stata (dta) file
+haven<span class="op">::</span><span class="kw">read_stata</span>(<span class="st">&quot;data/dta.dta&quot;</span>)
+<span class="co">#&gt; # A tibble: 2 x 8</span>
+<span class="co">#&gt;   datetime_c          datetime_big_c      date       weekly_date</span>
+<span class="co">#&gt;   &lt;dttm&gt;              &lt;dttm&gt;              &lt;date&gt;           &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 2006-11-19 23:13:20 2006-11-19 22:57:03 2010-01-20       2601.</span>
+<span class="co">#&gt; 2 1959-12-31 20:03:20 1959-12-31 23:35:21 1953-10-02       -601.</span>
+<span class="co">#&gt; # ... with 4 more variables: monthly_date &lt;dbl&gt;, quarterly_date &lt;dbl&gt;,</span>
+<span class="co">#&gt; #   half_yearly_date &lt;dbl&gt;, yearly_date &lt;dbl&gt;</span></code></pre></div>
+</section><section id="rds-r" class="slide level2">
+<h2>rds (R)</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">readRDS</span>(<span class="st">&quot;data/rds.rds&quot;</span>)
+<span class="co">#&gt; # A tibble: 88 x 18</span>
+<span class="co">#&gt;    expertise     MR1   MR2   MR3   MR4   MR6   MR7   MR8   MR9   MR5  MR10</span>
+<span class="co">#&gt;    &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 news prese… 0.990    0.    0.    0.    0.    0.    0.    0.    0.    0.</span>
+<span class="co">#&gt;  2 page layout 0.990    0.    0.    0.    0.    0.    0.    0.    0.    0.</span>
+<span class="co">#&gt;  3 history of… 0.990    0.    0.    0.    0.    0.    0.    0.    0.    0.</span>
+<span class="co">#&gt;  4 databases   0.990    0.    0.    0.    0.    0.    0.    0.    0.    0.</span>
+<span class="co">#&gt;  5 graphic de… 0.990    0.    0.    0.    0.    0.    0.    0.    0.    0.</span>
+<span class="co">#&gt;  6 programming 0.990    0.    0.    0.    0.    0.    0.    0.    0.    0.</span>
+<span class="co">#&gt;  7 practice o… 0.990    0.    0.    0.    0.    0.    0.    0.    0.    0.</span>
+<span class="co">#&gt;  8 data visua… 0.990    0.    0.    0.    0.    0.    0.    0.    0.    0.</span>
+<span class="co">#&gt;  9 data-drive… 0.990    0.    0.    0.    0.    0.    0.    0.    0.    0.</span>
+<span class="co">#&gt; 10 data journ… 0.990    0.    0.    0.    0.    0.    0.    0.    0.    0.</span>
+<span class="co">#&gt; # ... with 78 more rows, and 7 more variables: MR13 &lt;dbl&gt;, MR11 &lt;dbl&gt;,</span>
+<span class="co">#&gt; #   MR14 &lt;dbl&gt;, MR12 &lt;dbl&gt;, MR15 &lt;dbl&gt;, MR16 &lt;dbl&gt;, var &lt;fct&gt;</span></code></pre></div>
+<!-- ############################################# -->
+<!-- ##           DESCRIPTIVES IN R             ## -->
+<!-- ############################################# -->
+</section>
+<section id="write-up" class="titleslide slide level1"><h2 class="shout">Write up</h2></section><section id="data" class="slide level2">
+<h2>Data</h2>
+<ul>
+<li>After data collection and prior to analysis, research projects should describe, or summarize, the data.</li>
+<li>This should be included in the <strong>methods</strong> section of your paper</li>
+<li>Descriptives in the data summary typically include the following
+<ul>
+<li>Number of observations (total number <code>N = 345</code>)</li>
+<li>Demographic (age, sex, race, education, etc.) breakdowns (numbers and percents <em>15.3% were female</em> (<code>n = 23</code>))
+<ul>
+<li>For age, usually a range and the mean</li>
+</ul></li>
+<li>Study variable information: min, max, mean, sd</li>
+</ul></li>
+</ul>
+</section><section id="useful-functionspackages" class="slide level2">
+<h2>Useful functions/packages</h2>
+<ul>
+<li>Fortunately, there are lots of good functions and packages to choose from
+<ul>
+<li><code>summary()</code> (base R)</li>
+<li><code>describe()</code> from <strong>{psych}</strong></li>
+<li><code>skim()</code> from <strong>{skimr}</strong></li>
+<li><code>summarize()</code> from <strong>{rockchalk}</strong></li>
+</ul></li>
+</ul>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="7-descriptives_files/resources/node_modules/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+    <script>renderMathInElement(document.body);</script>
+  
+  
+</body>
+</html>
