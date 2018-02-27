@@ -160,11 +160,11 @@ x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">1
 
 ## calculate mean
 <span class="kw">sum</span>(x) <span class="op">/</span><span class="st"> </span><span class="kw">length</span>(x)
-<span class="co">#&gt; [1] 0.649651</span>
+<span class="co">#&gt; [1] -0.599113</span>
 
 ## use mean function
 <span class="kw">mean</span>(x)
-<span class="co">#&gt; [1] 0.649651</span></code></pre></div>
+<span class="co">#&gt; [1] -0.599113</span></code></pre></div>
 </section><section id="median" class="slide level2">
 <h2>Median</h2>
 <ul>
@@ -175,12 +175,12 @@ x &lt;-<span class="st"> </span><span class="kw">sort</span>(x)
 
 ## print and find the middle values (5th and 6th)
 x
-<span class="co">#&gt;  [1] -0.3732418  0.0716279  0.1008515  0.4217097  0.7278986  0.7352692</span>
-<span class="co">#&gt;  [7]  0.9510263  1.0252363  1.2456933  1.5904388</span>
+<span class="co">#&gt;  [1] -3.1904552 -1.6079076 -1.0319800 -0.7424635 -0.5188836 -0.3833962</span>
+<span class="co">#&gt;  [7] -0.3437870 -0.1886765  1.0018183  1.0146012</span>
 
 ## use median function
 <span class="kw">median</span>(x)
-<span class="co">#&gt; [1] 0.7315839</span></code></pre></div>
+<span class="co">#&gt; [1] -0.4511399</span></code></pre></div>
 </section><section id="mode" class="slide level2">
 <h2>Mode</h2>
 <ul>
@@ -195,8 +195,8 @@ y_freq &lt;-<span class="st"> </span><span class="kw">table</span>(y)
 ## sort and print table
 <span class="kw">sort</span>(y_freq, <span class="dt">decreasing =</span> <span class="ot">TRUE</span>)
 <span class="co">#&gt; y</span>
-<span class="co">#&gt;  4  6  3  7 10  8  9  1  2  5 </span>
-<span class="co">#&gt; 14 13 12 11 11  9  9  7  7  7</span></code></pre></div>
+<span class="co">#&gt;  3  7 10  2  5  9  1  8  6  4 </span>
+<span class="co">#&gt; 13 13 13 12 11 10  8  8  7  5</span></code></pre></div>
 </section><section id="important-r-note" class="slide level2">
 <h2>Important R note</h2>
 <ul>
@@ -222,7 +222,7 @@ x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</s
 
 ## returns the mean we want
 <span class="kw">mean</span>(x, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)
-<span class="co">#&gt; [1] 0.649651</span></code></pre></div>
+<span class="co">#&gt; [1] -0.599113</span></code></pre></div>
 </section><section id="dispersion" class="slide level2">
 <h2>Dispersion</h2>
 <ul>
@@ -255,11 +255,11 @@ x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</s
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## calculate variance
 <span class="kw">sum</span>((y <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(y))<span class="op">^</span><span class="dv">2</span>) <span class="op">/</span><span class="st"> </span>(<span class="kw">length</span>(y) <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)
-<span class="co">#&gt; [1] 7.580202</span>
+<span class="co">#&gt; [1] 8.780909</span>
 
 ## use the var function
 <span class="kw">var</span>(y)
-<span class="co">#&gt; [1] 7.580202</span></code></pre></div>
+<span class="co">#&gt; [1] 8.780909</span></code></pre></div>
 </section><section id="standard-deviation" class="slide level2">
 <h2>Standard deviation</h2>
 <ul>
@@ -270,11 +270,11 @@ yvar &lt;-<span class="st"> </span><span class="kw">var</span>(y)
 
 ## square root of variance
 <span class="kw">sqrt</span>(yvar)
-<span class="co">#&gt; [1] 2.753217</span>
+<span class="co">#&gt; [1] 2.96326</span>
 
 ## use sd function
 <span class="kw">sd</span>(y)
-<span class="co">#&gt; [1] 2.753217</span></code></pre></div>
+<span class="co">#&gt; [1] 2.96326</span></code></pre></div>
 <!-- ############################################# -->
 <!-- ##         GETTING DATA INTO R             ## -->
 <!-- ############################################# -->
@@ -381,8 +381,17 @@ haven<span class="op">::</span><span class="kw">read_stata</span>(<span class="s
 <section id="write-up" class="titleslide slide level1"><h2 class="shout">Write up</h2></section><section id="data" class="slide level2">
 <h2>Data</h2>
 <ul>
-<li>After data collection and prior to analysis, research projects should describe, or summarize, the data.</li>
+<li>After data collection and prior to analysis, research projects should describe, or summarize, the data</li>
 <li>This should be included in the <strong>methods</strong> section of your paper</li>
+<li>Descriptives for:
+<ul>
+<li>Participants</li>
+<li>Variables</li>
+</ul></li>
+</ul>
+</section><section id="participants" class="slide level2">
+<h2>Participants</h2>
+<ul>
 <li>Descriptives in the data summary typically include the following
 <ul>
 <li>Number of observations (total number <code>N = 345</code>)</li>
@@ -390,8 +399,19 @@ haven<span class="op">::</span><span class="kw">read_stata</span>(<span class="s
 <ul>
 <li>For age, usually a range and the mean</li>
 </ul></li>
-<li>Study variable information: min, max, mean, sd</li>
 </ul></li>
+</ul>
+</section><section id="variables" class="slide level2">
+<h2>Variables</h2>
+<ul>
+<li>Study variable information:
+<ul>
+<li>min</li>
+<li>max</li>
+<li>mean</li>
+<li>sd</li>
+</ul></li>
+<li>Correlation table (don’t worry about that yet)</li>
 </ul>
 </section><section id="useful-functionspackages" class="slide level2">
 <h2>Useful functions/packages</h2>

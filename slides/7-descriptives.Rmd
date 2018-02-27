@@ -254,13 +254,25 @@ readRDS("data/rds.rds")
 # Write up
 
 ## Data
-+ After data collection and prior to analysis, research projects should describe, or summarize, the data.
++ After data collection and prior to analysis, research projects should describe, or summarize, the data
 + This should be included in the **methods** section of your paper
++ Descriptives for:
+    - Participants
+    - Variables
+
+## Participants
 + Descriptives in the data summary typically include the following
     - Number of observations (total number `N = 345`)
     - Demographic (age, sex, race, education, etc.) breakdowns (numbers and percents *15.3% were female* (`n = 23`))
         - For age, usually a range and the mean
-    - Study variable information: min, max, mean, sd
+
+## Variables
++ Study variable information: 
+    - min
+    - max
+    - mean
+    - sd
++ Correlation table (don't worry about that yet)
 
 ## Useful functions/packages
 + Fortunately, there are lots of good functions and packages to choose from
