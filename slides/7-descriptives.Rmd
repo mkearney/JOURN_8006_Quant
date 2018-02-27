@@ -22,16 +22,11 @@ Sys.setenv(
 )
 ```
 
-<!-- ############################################# -->
-<!-- ##             RECAP/OVERVIEW              ## -->
-<!-- ############################################# -->
-
 # Recap and overview
 
-## #rstats
-> + **Software**
->     - **R**: A statistical programming language
->     - **Rstudio**: graphical interface (development environment)
+## \#rstats
+> + **R**: A statistical programming language
+> + **Rstudio**: graphical interface (development environment)
 > + **R objects and classes**
 >     - Creating and overriding R objects
 >     - Classes: `numeric`, `integer`, `character`, `factor`, `data.frame`
@@ -39,7 +34,7 @@ Sys.setenv(
 >     - Named automated tasks used on data (e.g., `mean(x)`)
 
 ## Due today
-+ Upload output from Homework #1
++ **Homework \#1** (upload output)
 
 ## Overview
 + **Descriptives**: summarizing data
@@ -120,13 +115,15 @@ y_freq <- table(y)
 sort(y_freq, decreasing = TRUE)
 ```
 
-
 ## Important R note
 + In R missing values are coded as `NA`
 + Inputs containing `NA` will return `NA` for these functions:
     - `sum()`, `mean()`, `median()`, `min()`, `max()`, `range()`, `var()`, `sd()`
 + To avoid this, include the argument `na.rm = TRUE`
-+ Although not always, this (ignoring missing values) is usually what you want to happen
+
+<br>
+
+<p class="note">Assuming you are **aware** of missing data, it is usually (though not always) desirable to omit `NA` values via `na.rm = TRUE`.</p>
 
 ## `na.rm = TRUE`
 + Example of finding mean when `x` contains a missing value (`NA`)
@@ -208,7 +205,9 @@ read.delim("data/tsv.tsv")
 
 ## dat
 + Wikipedia describes `.dat` as
+
 > not [a] specific file type, often generic extension for "data" files for a variety of applications
+
 + Often associated with Mplus (statistical software program)
 + See: \*SV methods, i.e., `read.table()`
 
