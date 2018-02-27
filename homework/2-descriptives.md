@@ -20,7 +20,10 @@ data <- read.csv("2-data.csv", stringsAsFactors = FALSE)
 ## what is the min, max, mean, and standard deviation of each variable
 ```
 
-Answer the following prompts by writing the appropriate code in the code chunks below each.
+Answer the following three questions
+------------------------------------
+
+Answer the following prompts by writing the appropriate code/text below each.
 
 First, how many times did each participant complete the survey? *Hint: create a frequency table `table()` of the ID variable `data$id`.*
 
@@ -33,3 +36,5 @@ Second, what is the mininum value, maximum value, mean, and standard deviation o
 ``` r
 ## your code goes here
 ```
+
+Third, write a description of the data set like you would in a manuscript.
