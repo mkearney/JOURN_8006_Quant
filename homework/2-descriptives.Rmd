@@ -1,47 +1,65 @@
 ---
-title: "Descriptives/Homework #2"
-author: "JOURN 8006"
-output: github_document
+title: "Homework #2"
+subtitle: "JOURN 8006"
+author: "\\<enter your name here>"
+date: "3/06/2018"
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment = "#>")
 ```
 
-## Homework \#2
-
 For this homework assignment, create a new folder and save the `2-descriptives.Rmd` and `2-data.csv` files in it.
 
-### Read the data
+## Data
 
 Read in the data file (`2-data.csv`) using the code below.
 
 ```{r}
 ## read data into R
-data <- read.csv("2-data.csv", stringsAsFactors = FALSE)
+df <- read.csv("2-data.csv", stringsAsFactors = FALSE)
 
-## for the ID variable...how many people completed the survey twice?
-
-## what is the min, max, mean, and standard deviation of each variable
+## preview first six rows of data
+head(df)
 ```
 
-## Answer the following three questions
+The data set `df` contains seven variables:
 
-Answer the following prompts by writing the appropriate code/text below each.
+- `age`: Age of the respondent
+- `race`: Race of the respondent
+- `sex`: Sex of the respondent
+- `polar`: Affective political polarization (favorability of in-group `-` favoriability of out-group where the groups are D and R political parties)
+- `sm_use`: Social media use (extent to which respondent uses social media)
+- `network_agree`: Network agreement (extent to which social media networks are politically like-minded)
+- `pp`: Political participation (number of political activities engaged in the past 6 months)
 
-First, how many times did each participant complete the survey? *Hint: create a frequency table `table()` of the ID variable `data$id`.*
+## Instructions
+Respond to the following three prompts by entering the appropriate code or text below each.
+
+## Prompts
+
+### 1) What is the breakdown (frequencies) of the respondents by `race` and by `sex`? (Hint: create frequency tables `table()` for the `df$race` and `df$sex` variables.)
 
 ```{r}
 ## your code goes here
 
 ```
 
-Second, what is the mininum value, maximum value, mean, and standard deviation of each variable (all variables besides `id`)? Provide code below to print out the correct answers and/or write up the correct answer as text following the code chunk below.
+### 2) What is the **mininum** value, **maximum** value, **mean**, and **standard deviation** for the `age`, `polar`, `sm_use`, `network_agree`, and `pp` variables?
 
 ```{r}
 ## your code goes here
 
+## use comment lines like this one to annotate (explain) your code
+
 ```
 
-Third, write a description of the data set like you would in a manuscript.
+### 3) Write a description of the `age`, `sex`, and `race` variables like you would expect to see in an academic manuscript. It should be approximately one paragraph (4-8 sentences). I've written the first sentence for you---though you will need to insert the correct number of participants.
 
+<!-- to respond to this prompt, edit and add to the text below --> 
+
+An online questionnaire was distributed to undergraduates (N = `__`) enrolled in a general education course at a major midwestern university.
+
+
+<!-- when you're finished responding to the prompts, make sure to click 'Knit` one last time. then upload the rendered html file (saved every time you `knit` the document) to Canvas -->
