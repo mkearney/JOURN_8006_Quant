@@ -1,0 +1,76 @@
+---
+title: "Week 8"
+subtitle: "T-tests"
+date: "`r Sys.Date()`"
+author: "Michael W. Kearney, PhD"
+institute: |
+  | School of Journalism
+  | Informatics Institute
+  | University of Missouri
+output: 
+  uslides::uslides_html:
+    self_contained: false
+---
+
+# t-tests
+
+## t-test
+- There are multiple types of t-tests.
+  - One sample
+  - Paired sample
+  - Independent sample
+
+## t-test
+- All t-tests assume the dependent variable, or the variable on which
+  groups may differ, are numeric (interval or ratio)
+- All t-tests assume the independent variable, or grouping variable,
+  are categorical (nominal or dicthomous)
+
+## One sample t-test
+- Compare sample mean versus population mean using a **one sample
+  t-test**
+$$ H_{1}: \mu \neq \bar{x} $$
+
+## Paired sample t-test
+- Compare the means of one group at different times using **paired
+    sample t-test**
+$$ H_{1}: \bar{x_{t1}} \neq \bar{x_{t2}} $$
+
+## Independent sample t-test
+  - ***Most common***: Compare the means of two [independent] groups
+    using an **independent samples t-test**
+$$ H_{1}: \bar{x_{1}} \neq \bar{x_{2}} $$
+
+## Independent samples t-test
+- To calculate an independent samples t statistic
+
+$$ t = \frac{\bar{x}_{1} - \bar{x}_{2}}{\sqrt{
+\frac{s_{1}^2}{n_{1}} +
+\frac{s_{2}^2}{n_{2}}}} $$
+
+## t-test example
+- Say we conduct an experiment with two groups and we're interested in
+what causes people to actually read news articles.
+
+- One group is given a 30 min lecture about the importance of civic
+  awareness.
+- The other group is told they will be debating one another on topics
+  related to current events.
+- Each person in both groups is given a newspaper. And then
+  researchers record how much each person read.
+
+## t-test example
+- Our research hypothesis is that competitive goals are better drivers
+  of news use than informed citizen values.
+$$ H_{1}: \bar{x_{debate}} > \bar{x_{informed}} $$
+
+- The null hypothesis assumes there is no difference.
+$$ H_{0}: \bar{x_{debate}} = \bar{x_{informed}} $$
+
+## t-test
+- The output of a t-test is the t- statistic.
+- Once the t statistic is computed, you can find the corresponding p
+  value using the appropriate degrees of freedom and a t-table.
+
+
+

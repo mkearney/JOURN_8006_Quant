@@ -1,0 +1,176 @@
+---
+title: "Week 8"
+subtitle: "Exam I Review"
+date: "`r Sys.Date()`"
+author: "Michael W. Kearney, PhD"
+institute: |
+  | School of Journalism
+  | Informatics Institute
+  | University of Missouri
+output: 
+  uslides::uslides_html:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = "#>")
+Sys.setenv(
+  USLIDES_BOTTOMLEFT = "uslidelogos/bl.jpg",
+  USLIDES_BOTTOMRIGHT = "uslidelogos/br.jpg",
+  USLIDES_BANNER = "uslidelogos/bn.jpg",
+  USLIDES_BACKGROUND = "uslidelogos/bg.jpg"
+)
+```
+
+## Exam 1 Prep
++ Exam I
+    - Identify level of measurement (nominal, ordinal, interval, ratio)
+    - Identify appropriate R class (character/factor, integer, numeric, data.frame)
+    - Interpret R code/output
+    - Predict R output
+    - Calculate [very simple] descriptive statistics
+    - Select calculated descriptive statistics
+
+# Levels of measurement
+
+## Level of measurement
+> + A likert-like item on a scale from 1 (strongly disagree) to 7 (strongly agree)
+>     + **interval**
+> + The weight of a person (in lbs.)
+>     + **ratio**
+> + The order in which horses finished the race
+>     + **ordinal**
+
+## Level of measurement
+> + The name of a newspaper
+>     + **nominal**
+> + The temperature (in F)
+>     + **interval**
+> + The number of times an article says "fake news"
+>     + **ratio**
+
+## Level of measurement
+> + Whether a movie is "rotten" or "fresh"
+>     + **nominal**
+> + What languages a journalist speaks
+>     + **nominal**
+> + How happy someone is on a scale from 1 (not happy) to 10 (very happy)
+>     + **interval**
+
+
+## Level of measurement
+- **interval** A likert-like item on a scale from 1 (strongly disagree) to 7 (strongly agree)
+- **ratio** The weight of a person (in lbs.)
+- **ordinal** The order in which horses finished the race
+- **nominal** The name of a newspaper
+- **interval** The temperature (in F)
+
+# R code/output
+
+## R output
+Predict the output: what is `y` equal to?
+```{r, eval=FALSE}
+x <- c(1, 2)
+y <- x - 1
+y
+```
+    a. `0`
+    b. `c(0, 1)`
+    c. `1`
+    d. `c(1, 0)`
+
+> + **b**
+
+## R output
+Predict the output: what is `y` equal to?
+```{r, eval=FALSE}
+x <- c(1, 2, -5, 2, 0, 14, NA)
+y <- mean(x)
+y
+```
+    a. `1.5`
+    b. `2.33`
+    c. `NA`
+    d. `c(1, 2, -5, 2, 0, 14, NA)`
+
+> + **c**
+
+# R classes
+
+## R class
+Predict the output: what class is `x`?
+```{r, eval=FALSE}
+x <- c(1L, 2L, 3L)
+class(x)
+```
+> + **integer**
+
+## R class
+Predict the output: what class is `x`?
+```{r, eval=FALSE}
+x <- c(0.25, -5.26, 2000)
+class(x)
+```
+> + **numeric**
+
+## R class
+Predict the output: what class is `x`?
+```{r, eval=FALSE}
+x <- c("1", "2", "3")
+class(x)
+```
+> + **character**
+
+## R class
+Predict the output: what class is `x`?
+```{r, eval=FALSE}
+x <- data.frame(
+  x = c("a", "b", "c"),
+  y = c("x", "y", "z")
+)
+class(x)
+```
+> + **data.frame**
+
+
+# Descriptives
+
+## Descriptive statistic
+Predict the output: What is the standard deviation of x?
+```{r, eval=FALSE}
+x <- c(-50, -40, -30, -20, -10, 0, 10, 20, 30, 40, 50)
+sd(x)
+```
+    a. 300
+    b. -33.17
+    c. 50
+    d. 33.17
+
+> + **d**
+
+## Descriptive statistic
+Predict the output: What is the mode of x?
+```{r, eval=FALSE}
+x <- c("a", "a", "b", "c", "c", "c")
+sort(table(x), decreasing = TRUE)
+```
+    a. a
+    b. b
+    c. c
+
+> + **c**
+
+## Descriptive statistic
+Predict the output: What is the median of x?
+```{r, eval=FALSE}
+x <- c(-50, 0, 1, 2, 3)
+median(x)
+```
+    a. -50
+    b. -8.8
+    c. 0
+    d. 1
+
+> + **d**
+
+

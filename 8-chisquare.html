@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 8</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto:700|Roboto+Condensed:400,400i,700,700i" rel="stylesheet"> -->
+  <link rel="stylesheet" href="8-chisquare_files/resources/node_modules/shower-ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="8-chisquare_files/resources/style-ribbon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  <script src="8-chisquare_files/resources/auto-render.min.js" type="text/javascript"></script>
+  
+  
+  
+  
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>Week 8</h1>
+    <p>Chi-squared test</p>
+  </header>
+
+  <section class="slide level1 titlepage titleslide">
+    <h2>Week 8</h2>
+    <h2>Chi-squared test</h2>
+    <h3>Michael W. Kearney, PhD <br> </h3>
+    <h3><div style="white-space: pre-line;">School of Journalism
+Informatics Institute
+University of Missouri</div></h3>
+  </section>
+
+  
+<section id="recap-and-overview" class="titleslide slide level1"><h2 class="shout">Recap and overview</h2></section><section id="recap" class="slide level2">
+<h2>Recap</h2>
+<ul>
+<li class="fragment next"><strong>R</strong>/<strong>Rstudio</strong>:
+<ul>
+<li class="fragment next">Objects, classes, functions</li>
+</ul></li>
+<li class="fragment next"><strong>Descriptives</strong>
+<ul>
+<li class="fragment next">Central tendency: median, mean, mode</li>
+<li class="fragment next">Dispersion: range, variance, standard deviation</li>
+</ul></li>
+</ul>
+</section><section id="due-today" class="slide level2">
+<h2>Due today</h2>
+<ul>
+<li><strong>Homework #2</strong> (upload rendered HTML)</li>
+</ul>
+</section><section id="next-week" class="slide level2">
+<h2>Next week</h2>
+<ul>
+<li>Exam I
+<ul>
+<li>Level of measurement (nominal, ordinal, interval, ratio)</li>
+<li>R classes (character/factor, integer, numeric, data.frame)</li>
+<li>Interpret R code/predict output</li>
+<li>Guess or calculate [very simple] descriptive statistics</li>
+</ul></li>
+</ul>
+</section><section id="overview" class="slide level2">
+<h2>Overview</h2>
+<ul>
+<li>Big picture: <strong>Chi-squared test</strong> and <strong>t-tests</strong></li>
+<li><strong>Chi-squared test</strong></li>
+<li><strong>t-test</strong></li>
+<li>Review for <strong>Exam I</strong></li>
+</ul>
+<!-- ############################################# -->
+<!-- ##              TIDYVERSE                  ## -->
+<!-- ############################################# -->
+</section>
+<section id="chi-squared-test-and-t-tests" class="titleslide slide level1"><h2 class="shout"><strong>Chi-squared test</strong> and <strong>t-tests</strong></h2></section><section id="independentdependent-variables" class="slide level2">
+<h2>Independent/dependent variables</h2>
+<ul>
+<li>Most quantitative research questions and hypotheses should consist of two variables
+<ul>
+<li><strong>Independent</strong> variable (IV): happens first (often assumed to be cause)</li>
+<li><strong>Dependent</strong> variable (DV): happens second (often assumed to be effect)</li>
+</ul></li>
+</ul>
+</section><section id="statistical-tests" class="slide level2">
+<h2>Statistical tests</h2>
+<ul>
+<li><strong>Statistical test</strong> refers a formal comparison between a theoretical model (H/RQ) and observed data, using a priori benchmarks as cutoff points in determining significance</li>
+</ul>
+</section><section id="p-valuesalpha-risk" class="slide level2">
+<h2>P values/alpha risk</h2>
+<ul>
+<li>By convention, many researchers judge <strong>p values</strong> (test statistics) of <strong>less than</strong> <code>.05</code> as significant</li>
+<li><strong>p value</strong> is the probability of observing of observing data given a true null hypothesis
+<ul>
+<li>How likely is it that I would have observed this data if the null hypothesis were true?</li>
+</ul></li>
+<li>In other words, <strong>p</strong> gives you an estimate for how absurd the data are
+<ul>
+<li>Smaller p-values mean the data are more absurd, and thus the null hypothesis is likely wrong</li>
+</ul></li>
+</ul>
+</section><section id="chi-squared-test" class="slide level2">
+<h2>Chi-squared test</h2>
+<ul>
+<li>Tests the independence of two categorical variables.
+<ul>
+<li><strong>Independent</strong> variable: <strong>categorical</strong></li>
+<li><strong>Dependent</strong> variable: <strong>categorical</strong></li>
+</ul></li>
+</ul>
+</section><section id="t-test" class="slide level2">
+<h2>T-test</h2>
+<ul>
+<li>Differences between two groups for one variable
+<ul>
+<li><strong>Independent</strong> variable: <strong>categorical</strong></li>
+<li><strong>Dependent</strong> variable: <strong>interval/ratio</strong> (numeric)</li>
+</ul></li>
+</ul>
+</section>
+<section id="chi-squared-test-1" class="titleslide slide level1"><h2 class="shout">Chi-squared test</h2></section><section id="chi-squared-test-2" class="slide level2">
+<h2>Chi-squared test</h2>
+<ul>
+<li><strong>Null Hypopthesis</strong>: Variable <span class="math inline">\(g_{1}\)</span> is independent of variable <span class="math inline">\(g_{2}\)</span></li>
+<li><strong>Alternative Hypothesis</strong>: Variable <span class="math inline">\(g_{1}\)</span> is dependent on variable <span class="math inline">\(g_{2}\)</span></li>
+</ul>
+</section><section id="chi-squared-test-3" class="slide level2">
+<h2>Chi-squared test</h2>
+<ul>
+<li><span class="math inline">\(H_{0}\)</span>: Values of variable <span class="math inline">\(g_{1}\)</span> occur independent of values of <span class="math inline">\(g_{2}\)</span></li>
+<li><span class="math inline">\(H_{0}\)</span>: Values of variable <span class="math inline">\(g_{1}\)</span> depend on values of variable <span class="math inline">\(g_{2}\)</span></li>
+</ul>
+</section><section id="chi-squared" class="slide level2">
+<h2>Chi-squared</h2>
+<ul>
+<li>Goodness of fit test</li>
+</ul>
+<p><span class="math display">\[
+ \chi^2 = \sum \frac{(o-e)^{2}}{e}
+\]</span></p>
+</section><section id="chi-squared-steps" class="slide level2">
+<h2>Chi-squared steps</h2>
+<ol type="1">
+<li>Make a contingency table</li>
+<li>Enter observed frequencies (counts)</li>
+<li>Sum by row and column</li>
+<li>Calculate expected frequencies</li>
+</ol>
+<ol type="a">
+<li>Column total divided by N times row total</li>
+</ol>
+</section><section id="chi-squared-example" class="slide level2">
+<h2>Chi-squared example</h2>
+<ul>
+<li>A poker dealing machine is supposed to deal cards at random, as if from an infinite deck. in a test, you counted 1,600 cards, and observed the following:</li>
+<li>Hearts 441</li>
+<li>Spades 404</li>
+<li>Diamonds 402</li>
+<li>Clubs 453</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Hearts</th>
+<th>Spades</th>
+<th>Diamonds</th>
+<th>Clubs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Observed</td>
+<td>441</td>
+<td>404</td>
+<td>402</td>
+<td>353</td>
+</tr>
+</tbody>
+</table>
+</section><section id="chi-squared-example-1" class="slide level2">
+<h2>Chi-squared example</h2>
+<p><span class="math display">\[ H_{0}: P_{h} = P_{s}  = P_{d}  = P_{c} \]</span></p>
+<p><span class="math display">\[ H_{1}: P_{h} \neq P_{s} \neq P_{d} \neq P_{c} \]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Hearts</th>
+<th>Spades</th>
+<th>Diamonds</th>
+<th>Clubs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Observed</td>
+<td>441</td>
+<td>404</td>
+<td>402</td>
+<td>353</td>
+</tr>
+<tr class="even">
+<td>Expected</td>
+<td>400</td>
+<td>400</td>
+<td>400</td>
+<td>400</td>
+</tr>
+</tbody>
+</table>
+</section><section id="chi-squared-example-2" class="slide level2">
+<h2>Chi-squared example</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Hearts</th>
+<th>Spades</th>
+<th>Diamonds</th>
+<th>Clubs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(o\)</span></td>
+<td>441</td>
+<td>404</td>
+<td>402</td>
+<td>353</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(e\)</span></td>
+<td>400</td>
+<td>400</td>
+<td>400</td>
+<td>400</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(o - e\)</span></td>
+<td>41</td>
+<td>4</td>
+<td>2</td>
+<td>-67</td>
+</tr>
+</tbody>
+</table>
+</section><section id="chi-squared-example-3" class="slide level2">
+<h2>Chi-squared example</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Hearts</th>
+<th>Spades</th>
+<th>Diamonds</th>
+<th>Clubs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(o\)</span></td>
+<td>441</td>
+<td>404</td>
+<td>402</td>
+<td>353</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(e\)</span></td>
+<td>400</td>
+<td>400</td>
+<td>400</td>
+<td>400</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(o - e\)</span></td>
+<td>41</td>
+<td>4</td>
+<td>2</td>
+<td>-67</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((o - e)^2\)</span></td>
+<td>1,681</td>
+<td>16</td>
+<td>4</td>
+<td>2,209</td>
+</tr>
+</tbody>
+</table>
+</section><section id="chi-squared-example-4" class="slide level2">
+<h2>Chi-squared example</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Hearts</th>
+<th>Spades</th>
+<th>Diamonds</th>
+<th>Clubs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(o\)</span></td>
+<td>441</td>
+<td>404</td>
+<td>402</td>
+<td>353</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(e\)</span></td>
+<td>400</td>
+<td>400</td>
+<td>400</td>
+<td>400</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(o - e\)</span></td>
+<td>41</td>
+<td>4</td>
+<td>2</td>
+<td>-67</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((o - e)^2\)</span></td>
+<td>1,681</td>
+<td>16</td>
+<td>4</td>
+<td>2,209</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\frac{(o - e)^2}{e}\)</span></td>
+<td>4.20</td>
+<td>0.04</td>
+<td>0.01</td>
+<td>5.52</td>
+</tr>
+</tbody>
+</table>
+</section><section id="chi-squared-problem" class="slide level2">
+<h2>Chi-squared problem</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Hearts</th>
+<th>Spades</th>
+<th>Diamonds</th>
+<th>Clubs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(o\)</span></td>
+<td>441</td>
+<td>404</td>
+<td>402</td>
+<td>353</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(e\)</span></td>
+<td>400</td>
+<td>400</td>
+<td>400</td>
+<td>400</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(o - e\)</span></td>
+<td>41</td>
+<td>4</td>
+<td>2</td>
+<td>-67</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((o - e)^2\)</span></td>
+<td>1,681</td>
+<td>16</td>
+<td>4</td>
+<td>2,209</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\frac{(o - e)^2}{e}\)</span></td>
+<td><strong>4.20</strong></td>
+<td><strong>0.04</strong></td>
+<td><strong>0.01</strong></td>
+<td><strong>5.52</strong></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[ \chi^2 = 9.77 \]</span></p>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="8-chisquare_files/resources/node_modules/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+    <script>renderMathInElement(document.body);</script>
+  
+  
+</body>
+</html>

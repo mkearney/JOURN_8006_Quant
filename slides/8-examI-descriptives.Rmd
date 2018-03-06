@@ -1,0 +1,277 @@
+---
+title: "Week 8"
+subtitle: "Exam I Review: Descriptives"
+date: "`r Sys.Date()`"
+author: "Michael W. Kearney, PhD"
+institute: |
+  | School of Journalism
+  | Informatics Institute
+  | University of Missouri
+output: 
+  uslides::uslides_html:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = "#>")
+Sys.setenv(
+  USLIDES_BOTTOMLEFT = "uslidelogos/bl.jpg",
+  USLIDES_BOTTOMRIGHT = "uslidelogos/br.jpg",
+  USLIDES_BANNER = "uslidelogos/bn.jpg",
+  USLIDES_BACKGROUND = "uslidelogos/bg.jpg"
+)
+```
+
+
+
+# Measures of central tendency
+
+## Central tendency
+- These statistics describe the *center (middle)* of a distribution:
+  - Mode
+  - Median
+  - Mean
+- *Which measure is best* depends on data type and context.
+
+## Mode
+- *Mode* describes the most common data point.
+  - The value, response, category, etc. that occurs most frequently.
+- Particularly useful when describing categorical, ordinal, or
+  non-normal (skewed) integer data.
+  - Not useful when dealing with normal, continuous data.
+
+$$ x = 5.1465, 8.2413, 3.9485, 3.2934 $$
+
+---
+
+## Calculating the mode
+- To find the mode, create a frequency table (two columns).
+  - List all possible values on one side (column) and keep a tally
+    (count) of observations for each value on the right side.
+  - Value with the highest count is the mode
+> And, yes, it's possible to have multiple modes
+
+
+## Practice
+- Five students took an exam. The scores were
+
+$$ x = 90, 80, 90, 90, 75 $$
+
+- What is the mode of this distribution?
+
+| Value  | Count |
+|--------|-------|
+| **90** | 111   |
+| 80     | 1     |
+| 75     | 1     |
+
+---
+
+## Practice
+- Five students compared shoe sizes. The sizes were
+
+$$ x = 10, 5, 5, 7, 7 $$
+
+- What is the mode of this distribution?
+
+| Value  | Count |
+|--------|-------|
+| 10     | 1     |
+| **7**  | 11    |
+| **5**  | 11    |
+
+---
+
+## Practice
+- Five students flip five coins. The side-up coins were heads, heads,
+  heads, tails, tails.
+- What is the mode of this distribution?
+
+| Value     | Count |
+|-----------|-------|
+| **heads** | 111   |
+| tails     | 11    |
+
+
+---
+
+## Practice
+- Five students owned five pets. None of them were elephants.
+- What is the mode of this distribution?
+
+| Value         | Count |
+|---------------|-------|
+| Elephant      | 0     |
+| Non-elephant  | 5     |
+
+---
+
+## Median
+- *Median* describes the mid-point of a distribution.
+  - The value found at the center (50%) of the data.
+- Particularly useful when **describing**---esp skewed---distributions.
+
+---
+
+## Calculating the median
+- To find the median, create a string of N values ordered from
+  low-to-high or high-to-low.
+- If N is odd, report the **one** middle value (it should be
+  equidistant in the number of observations on either side)
+- If N is even, find the **two** middle values and report their
+  average
+
+---
+
+## Practice
+- Five students compared shoe sizes. The sizes were
+
+$$ x = 10, 5, 5, 7, 7 $$
+
+- What is the median of this distribution?
+
+
+| 1st | 2nd | 3rd     | 4th | 5th  |
+|-----|-----|---------|-----|------|
+| 5   | 5   | **7**   | 7   | 10   |
+
+---
+
+## Practice
+- Ten students completed the exam. Their scores were
+
+$$ x = 81, 44, 59, 72, 31, 60, 6, 12, 53, 46 $$
+
+- What is the median of this distribution?
+
+---
+
+## &nbsp;
+
+$$ x = 81, 44, 59, 72, 31, 60, 6, 12, 53, 46 $$
+
+| 1  | 2   | 3   |  4  |    5    |   6     |   7 |  8  | 9   |  10  |
+|---|----|----|----|--------|--------|----|----|----|----|
+| 6 | 12 | 31 | 44 | **46** | **53** | 59 | 60 | 72 | 81 |
+
+<br>
+- (46 + 53) / 2 = **49.5**
+
+---
+
+## Mean
+- *Mean* is the expected value of any given observation assuming no
+other information is provided.
+	  - Example: let's say the mean height of KU students is 5'7''.
+	  If we randomly selected one KU student, what would you predict
+	  their height to be?
+- We typically think of the mean when we use the word "average."
+
+---
+
+## Calculating the mean
+- To calculate the mean of `x`, sum (add together) all values of `x`
+and divide by `N` (the number of observations).
+$$ \mu = \frac{\sum x}{N} $$
+
+---
+
+## Practice
+- Example RQ: How many pets do you have?
+  - Data: 0, 2, 3, 1, 0, 2 (N = 6)
+
+$$ \mu = \frac{(0 + 2 + 3 + 1 + 0 + 2)}{6} $$
+
+$$ \mu = \frac{(8)}{6} $$
+
+$$ \mu = \frac{4}{3} $$
+
+---
+
+
+## Practice
+- Working individually, use the following information to calculate
+the mean weight of office desks in Bailey 2
+	- Data (weight of desks in lbs):
+
+$$ lbs = 50, 125.5, 25.5, 50.5, 8.5 $$
+
+$$ \mu_{desks} = ~~~~~~~~~~ $$
+
+---
+
+## More practice
+- Working with the person next to you (groups of 2), calculate the
+mean number of days in a month (assuming Gregorian calendar):
+	 - What is the mean number of days for any given month?
+
+---
+
+## Why know the mean?
+- Because it's the best predictor of any given observation
+- Guessing the mean (instead of the median or mode, for example) should
+result in the **smallest amount of error**
+	   - Error here refers to degree to which an observed value
+	   differs from an expected value.
+
+---
+
+## A mean[ingful] example
+- One last example: Let's say your goal is to get as close as possible
+to predicting the outcome of a dice roll (two 6-sided dice)
+- If reducing the amount of error is any consolation, then guess the mean
+- If the only path to victory is guessing the exact outcome, then
+guess your favorite number.
+	- Dice roller: [https://www.random.org/dice/](https://www.random.org/dice/)
+
+
+# Measures of dispersion
+
+## Range
+- **Range** desribes the distance between a distribution's **maximum**
+  and **minimum** values
+  - Maximum is the highest/largest observed value
+  - Minimum is the lowest/smallest observed value
+
+$$ range = min - max $$
+
+- The range is often reported along with the maximum and minimum, e.g,
+  the sample consisted of exclusively undergraduates (M age = 21.20,
+  SD = 2.55, range = 18 - 24).
+
+---
+
+## Variability
+- Variance refers to the degree to which a distribution **varies**
+- It's measured by calculating the distance from the mean for each
+  observation
+- When variance is **low**, there is **little change** in data values.
+- When variance is **high**, there is **lots of change** in data values.
+
+---
+
+## Standard deviation
+- The standardized form of variance is referred to as the **standard
+  deviation**
+- Standard deviations describe the average distance from the mean.
+  - The mean can be found at **zero** standard deviations from the
+    mean, or the 50% percentile
+  - For a normal distribution, 95% of the observations should fall
+    within plus or minus 2 standard deviations
+
+---
+
+## Calculating standard deviation
+- Don't worry about memorizing this, but it's useful to see how it
+  works
+
+$$ s^2 = \sqrt{ \frac{\sum x - \bar{x}}{N - 1}} $$
+
+$$ sd = \sqrt{s^2} $$
+
+---
+
+## Easier standard deviation formula
+- There's a shortcut formula that is useful to know:
+
+$$ s^2 = \sqrt{\frac{\sum X^2 - \frac{(\sum X)^2}{N}}{N - 1}} $$

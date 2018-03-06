@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 8</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto:700|Roboto+Condensed:400,400i,700,700i" rel="stylesheet"> -->
+  <link rel="stylesheet" href="8-ttests_files/resources/node_modules/shower-ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="8-ttests_files/resources/style-ribbon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  <script src="8-ttests_files/resources/auto-render.min.js" type="text/javascript"></script>
+  
+  
+  
+  
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>Week 8</h1>
+    <p>T-tests</p>
+  </header>
+
+  <section class="slide level1 titlepage titleslide">
+    <h2>Week 8</h2>
+    <h2>T-tests</h2>
+    <h3>Michael W. Kearney, PhD <br> </h3>
+    <h3><div style="white-space: pre-line;">School of Journalism
+Informatics Institute
+University of Missouri</div></h3>
+  </section>
+
+  
+<section id="t-tests" class="titleslide slide level1"><h2 class="shout">t-tests</h2></section><section id="t-test" class="slide level2">
+<h2>t-test</h2>
+<ul>
+<li>There are multiple types of t-tests.</li>
+<li>One sample</li>
+<li>Paired sample</li>
+<li>Independent sample</li>
+</ul>
+</section><section id="t-test-1" class="slide level2">
+<h2>t-test</h2>
+<ul>
+<li>All t-tests assume the dependent variable, or the variable on which groups may differ, are numeric (interval or ratio)</li>
+<li>All t-tests assume the independent variable, or grouping variable, are categorical (nominal or dicthomous)</li>
+</ul>
+</section><section id="one-sample-t-test" class="slide level2">
+<h2>One sample t-test</h2>
+<ul>
+<li>Compare sample mean versus population mean using a <strong>one sample t-test</strong> <span class="math display">\[ H_{1}: \mu \neq \bar{x} \]</span></li>
+</ul>
+</section><section id="paired-sample-t-test" class="slide level2">
+<h2>Paired sample t-test</h2>
+<ul>
+<li>Compare the means of one group at different times using <strong>paired sample t-test</strong> <span class="math display">\[ H_{1}: \bar{x_{t1}} \neq \bar{x_{t2}} \]</span></li>
+</ul>
+</section><section id="independent-sample-t-test" class="slide level2">
+<h2>Independent sample t-test</h2>
+<ul>
+<li><strong><em>Most common</em></strong>: Compare the means of two [independent] groups using an <strong>independent samples t-test</strong> <span class="math display">\[ H_{1}: \bar{x_{1}} \neq \bar{x_{2}} \]</span></li>
+</ul>
+</section><section id="independent-samples-t-test" class="slide level2">
+<h2>Independent samples t-test</h2>
+<ul>
+<li>To calculate an independent samples t statistic</li>
+</ul>
+<p><span class="math display">\[ t = \frac{\bar{x}_{1} - \bar{x}_{2}}{\sqrt{
+\frac{s_{1}^2}{n_{1}} +
+\frac{s_{2}^2}{n_{2}}}} \]</span></p>
+</section><section id="t-test-example" class="slide level2">
+<h2>t-test example</h2>
+<ul>
+<li><p>Say we conduct an experiment with two groups and we’re interested in what causes people to actually read news articles.</p></li>
+<li>One group is given a 30 min lecture about the importance of civic awareness.</li>
+<li>The other group is told they will be debating one another on topics related to current events.</li>
+<li><p>Each person in both groups is given a newspaper. And then researchers record how much each person read.</p></li>
+</ul>
+</section><section id="t-test-example-1" class="slide level2">
+<h2>t-test example</h2>
+<ul>
+<li><p>Our research hypothesis is that competitive goals are better drivers of news use than informed citizen values. <span class="math display">\[ H_{1}: \bar{x_{debate}} &gt; \bar{x_{informed}} \]</span></p></li>
+<li><p>The null hypothesis assumes there is no difference. <span class="math display">\[ H_{0}: \bar{x_{debate}} = \bar{x_{informed}} \]</span></p></li>
+</ul>
+</section><section id="t-test-2" class="slide level2">
+<h2>t-test</h2>
+<ul>
+<li>The output of a t-test is the t- statistic.</li>
+<li>Once the t statistic is computed, you can find the corresponding p value using the appropriate degrees of freedom and a t-table.</li>
+</ul>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="8-ttests_files/resources/node_modules/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+    <script>renderMathInElement(document.body);</script>
+  
+  
+</body>
+</html>

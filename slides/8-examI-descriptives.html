@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 8</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto:700|Roboto+Condensed:400,400i,700,700i" rel="stylesheet"> -->
+  <link rel="stylesheet" href="8-examI-descriptives_files/resources/node_modules/shower-ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="8-examI-descriptives_files/resources/style-ribbon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  <script src="8-examI-descriptives_files/resources/auto-render.min.js" type="text/javascript"></script>
+  
+  
+  
+  
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>Week 8</h1>
+    <p>Exam I Review: Descriptives</p>
+  </header>
+
+  <section class="slide level1 titlepage titleslide">
+    <h2>Week 8</h2>
+    <h2>Exam I Review: Descriptives</h2>
+    <h3>Michael W. Kearney, PhD <br> </h3>
+    <h3><div style="white-space: pre-line;">School of Journalism
+Informatics Institute
+University of Missouri</div></h3>
+  </section>
+
+  
+<section id="measures-of-central-tendency" class="titleslide slide level1"><h2 class="shout">Measures of central tendency</h2></section><section id="central-tendency" class="slide level2">
+<h2>Central tendency</h2>
+<ul>
+<li>These statistics describe the <em>center (middle)</em> of a distribution:</li>
+<li>Mode</li>
+<li>Median</li>
+<li>Mean</li>
+<li><em>Which measure is best</em> depends on data type and context.</li>
+</ul>
+</section><section id="mode" class="slide level2">
+<h2>Mode</h2>
+<ul>
+<li><em>Mode</em> describes the most common data point.</li>
+<li>The value, response, category, etc. that occurs most frequently.</li>
+<li>Particularly useful when describing categorical, ordinal, or non-normal (skewed) integer data.</li>
+<li>Not useful when dealing with normal, continuous data.</li>
+</ul>
+<p><span class="math display">\[ x = 5.1465, 8.2413, 3.9485, 3.2934 \]</span></p>
+</section><section id="calculating-the-mode" class="slide level2">
+<h2>Calculating the mode</h2>
+<ul>
+<li>To find the mode, create a frequency table (two columns).</li>
+<li>List all possible values on one side (column) and keep a tally (count) of observations for each value on the right side.</li>
+<li>Value with the highest count is the mode &gt; And, yes, it’s possible to have multiple modes</li>
+</ul>
+</section><section id="practice" class="slide level2">
+<h2>Practice</h2>
+<ul>
+<li>Five students took an exam. The scores were</li>
+</ul>
+<p><span class="math display">\[ x = 90, 80, 90, 90, 75 \]</span></p>
+<ul>
+<li>What is the mode of this distribution?</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Value</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>90</strong></td>
+<td>111</td>
+</tr>
+<tr class="even">
+<td>80</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>75</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</section><section id="practice-1" class="slide level2">
+<h2>Practice</h2>
+<ul>
+<li>Five students compared shoe sizes. The sizes were</li>
+</ul>
+<p><span class="math display">\[ x = 10, 5, 5, 7, 7 \]</span></p>
+<ul>
+<li>What is the mode of this distribution?</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Value</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><strong>7</strong></td>
+<td>11</td>
+</tr>
+<tr class="odd">
+<td><strong>5</strong></td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+</section><section id="practice-2" class="slide level2">
+<h2>Practice</h2>
+<ul>
+<li>Five students flip five coins. The side-up coins were heads, heads, heads, tails, tails.</li>
+<li>What is the mode of this distribution?</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Value</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>heads</strong></td>
+<td>111</td>
+</tr>
+<tr class="even">
+<td>tails</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+</section><section id="practice-3" class="slide level2">
+<h2>Practice</h2>
+<ul>
+<li>Five students owned five pets. None of them were elephants.</li>
+<li>What is the mode of this distribution?</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Value</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Elephant</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Non-elephant</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</section><section id="median" class="slide level2">
+<h2>Median</h2>
+<ul>
+<li><em>Median</em> describes the mid-point of a distribution.</li>
+<li>The value found at the center (50%) of the data.</li>
+<li>Particularly useful when <strong>describing</strong>—esp skewed—distributions.</li>
+</ul>
+</section><section id="calculating-the-median" class="slide level2">
+<h2>Calculating the median</h2>
+<ul>
+<li>To find the median, create a string of N values ordered from low-to-high or high-to-low.</li>
+<li>If N is odd, report the <strong>one</strong> middle value (it should be equidistant in the number of observations on either side)</li>
+<li>If N is even, find the <strong>two</strong> middle values and report their average</li>
+</ul>
+</section><section id="practice-4" class="slide level2">
+<h2>Practice</h2>
+<ul>
+<li>Five students compared shoe sizes. The sizes were</li>
+</ul>
+<p><span class="math display">\[ x = 10, 5, 5, 7, 7 \]</span></p>
+<ul>
+<li>What is the median of this distribution?</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>1st</th>
+<th>2nd</th>
+<th>3rd</th>
+<th>4th</th>
+<th>5th</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5</td>
+<td>5</td>
+<td><strong>7</strong></td>
+<td>7</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+</section><section id="practice-5" class="slide level2">
+<h2>Practice</h2>
+<ul>
+<li>Ten students completed the exam. Their scores were</li>
+</ul>
+<p><span class="math display">\[ x = 81, 44, 59, 72, 31, 60, 6, 12, 53, 46 \]</span></p>
+<ul>
+<li>What is the median of this distribution?</li>
+</ul>
+</section><section id="section" class="slide level2">
+<h2> </h2>
+<p><span class="math display">\[ x = 81, 44, 59, 72, 31, 60, 6, 12, 53, 46 \]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>6</td>
+<td>12</td>
+<td>31</td>
+<td>44</td>
+<td><strong>46</strong></td>
+<td><strong>53</strong></td>
+<td>59</td>
+<td>60</td>
+<td>72</td>
+<td>81</td>
+</tr>
+</tbody>
+</table>
+<p><br> - (46 + 53) / 2 = <strong>49.5</strong></p>
+</section><section id="mean" class="slide level2">
+<h2>Mean</h2>
+<ul>
+<li><em>Mean</em> is the expected value of any given observation assuming no other information is provided.
+<ul>
+<li>Example: let’s say the mean height of KU students is 5’7’’. If we randomly selected one KU student, what would you predict their height to be?</li>
+</ul></li>
+<li>We typically think of the mean when we use the word “average.”</li>
+</ul>
+</section><section id="calculating-the-mean" class="slide level2">
+<h2>Calculating the mean</h2>
+<ul>
+<li>To calculate the mean of <code>x</code>, sum (add together) all values of <code>x</code> and divide by <code>N</code> (the number of observations). <span class="math display">\[ \mu = \frac{\sum x}{N} \]</span></li>
+</ul>
+</section><section id="practice-6" class="slide level2">
+<h2>Practice</h2>
+<ul>
+<li>Example RQ: How many pets do you have?</li>
+<li>Data: 0, 2, 3, 1, 0, 2 (N = 6)</li>
+</ul>
+<p><span class="math display">\[ \mu = \frac{(0 + 2 + 3 + 1 + 0 + 2)}{6} \]</span></p>
+<p><span class="math display">\[ \mu = \frac{(8)}{6} \]</span></p>
+<p><span class="math display">\[ \mu = \frac{4}{3} \]</span></p>
+</section><section id="practice-7" class="slide level2">
+<h2>Practice</h2>
+<ul>
+<li>Working individually, use the following information to calculate the mean weight of office desks in Bailey 2
+<ul>
+<li>Data (weight of desks in lbs):</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[ lbs = 50, 125.5, 25.5, 50.5, 8.5 \]</span></p>
+<p><span class="math display">\[ \mu_{desks} = ~~~~~~~~~~ \]</span></p>
+</section><section id="more-practice" class="slide level2">
+<h2>More practice</h2>
+<ul>
+<li>Working with the person next to you (groups of 2), calculate the mean number of days in a month (assuming Gregorian calendar):
+<ul>
+<li>What is the mean number of days for any given month?</li>
+</ul></li>
+</ul>
+</section><section id="why-know-the-mean" class="slide level2">
+<h2>Why know the mean?</h2>
+<ul>
+<li>Because it’s the best predictor of any given observation</li>
+<li>Guessing the mean (instead of the median or mode, for example) should result in the <strong>smallest amount of error</strong>
+<ul>
+<li>Error here refers to degree to which an observed value differs from an expected value.</li>
+</ul></li>
+</ul>
+</section><section id="a-meaningful-example" class="slide level2">
+<h2>A mean[ingful] example</h2>
+<ul>
+<li>One last example: Let’s say your goal is to get as close as possible to predicting the outcome of a dice roll (two 6-sided dice)</li>
+<li>If reducing the amount of error is any consolation, then guess the mean</li>
+<li>If the only path to victory is guessing the exact outcome, then guess your favorite number.
+<ul>
+<li>Dice roller: <a href="https://www.random.org/dice/" class="uri">https://www.random.org/dice/</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="measures-of-dispersion" class="titleslide slide level1"><h2 class="shout">Measures of dispersion</h2></section><section id="range" class="slide level2">
+<h2>Range</h2>
+<ul>
+<li><strong>Range</strong> desribes the distance between a distribution’s <strong>maximum</strong> and <strong>minimum</strong> values</li>
+<li>Maximum is the highest/largest observed value</li>
+<li>Minimum is the lowest/smallest observed value</li>
+</ul>
+<p><span class="math display">\[ range = min - max \]</span></p>
+<ul>
+<li>The range is often reported along with the maximum and minimum, e.g, the sample consisted of exclusively undergraduates (M age = 21.20, SD = 2.55, range = 18 - 24).</li>
+</ul>
+</section><section id="variability" class="slide level2">
+<h2>Variability</h2>
+<ul>
+<li>Variance refers to the degree to which a distribution <strong>varies</strong></li>
+<li>It’s measured by calculating the distance from the mean for each observation</li>
+<li>When variance is <strong>low</strong>, there is <strong>little change</strong> in data values.</li>
+<li>When variance is <strong>high</strong>, there is <strong>lots of change</strong> in data values.</li>
+</ul>
+</section><section id="standard-deviation" class="slide level2">
+<h2>Standard deviation</h2>
+<ul>
+<li>The standardized form of variance is referred to as the <strong>standard deviation</strong></li>
+<li>Standard deviations describe the average distance from the mean.</li>
+<li>The mean can be found at <strong>zero</strong> standard deviations from the mean, or the 50% percentile</li>
+<li>For a normal distribution, 95% of the observations should fall within plus or minus 2 standard deviations</li>
+</ul>
+</section><section id="calculating-standard-deviation" class="slide level2">
+<h2>Calculating standard deviation</h2>
+<ul>
+<li>Don’t worry about memorizing this, but it’s useful to see how it works</li>
+</ul>
+<p><span class="math display">\[ s^2 = \sqrt{ \frac{\sum x - \bar{x}}{N - 1}} \]</span></p>
+<p><span class="math display">\[ sd = \sqrt{s^2} \]</span></p>
+</section><section id="easier-standard-deviation-formula" class="slide level2">
+<h2>Easier standard deviation formula</h2>
+<ul>
+<li>There’s a shortcut formula that is useful to know:</li>
+</ul>
+<p><span class="math display">\[ s^2 = \sqrt{\frac{\sum X^2 - \frac{(\sum X)^2}{N}}{N - 1}} \]</span></p>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="8-examI-descriptives_files/resources/node_modules/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+    <script>renderMathInElement(document.body);</script>
+  
+  
+</body>
+</html>

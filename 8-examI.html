@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 8</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto:700|Roboto+Condensed:400,400i,700,700i" rel="stylesheet"> -->
+  <link rel="stylesheet" href="8-examI_files/resources/node_modules/shower-ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="8-examI_files/resources/style-ribbon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  <script src="8-examI_files/resources/auto-render.min.js" type="text/javascript"></script>
+  
+  
+    <style type="text/css">
+   div.sourceCode { overflow-x: auto; }
+   table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+     margin: 0; padding: 0; vertical-align: baseline; border: none; }
+   table.sourceCode { width: 100%; line-height: 100%; }
+   td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+   td.sourceCode { padding-left: 5px; }
+   code > span.kw { color: #0000ff; } /* Keyword */
+   code > span.ch { color: #008080; } /* Char */
+   code > span.st { color: #008080; } /* String */
+   code > span.co { color: #008000; } /* Comment */
+   code > span.ot { color: #ff4000; } /* Other */
+   code > span.al { color: #ff0000; } /* Alert */
+   code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+   code > span.wa { color: #008000; font-weight: bold; } /* Warning */
+   code > span.cn { } /* Constant */
+   code > span.sc { color: #008080; } /* SpecialChar */
+   code > span.vs { color: #008080; } /* VerbatimString */
+   code > span.ss { color: #008080; } /* SpecialString */
+   code > span.im { } /* Import */
+   code > span.va { } /* Variable */
+   code > span.cf { color: #0000ff; } /* ControlFlow */
+   code > span.op { } /* Operator */
+   code > span.bu { } /* BuiltIn */
+   code > span.ex { } /* Extension */
+   code > span.pp { color: #ff4000; } /* Preprocessor */
+   code > span.do { color: #008000; } /* Documentation */
+   code > span.an { color: #008000; } /* Annotation */
+   code > span.cv { color: #008000; } /* CommentVar */
+   code > span.at { } /* Attribute */
+   code > span.in { color: #008000; } /* Information */
+  </style>
+  
+  
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>Week 8</h1>
+    <p>Exam I Review</p>
+  </header>
+
+  <section class="slide level1 titlepage titleslide">
+    <h2>Week 8</h2>
+    <h2>Exam I Review</h2>
+    <h3>Michael W. Kearney, PhD <br> </h3>
+    <h3><div style="white-space: pre-line;">School of Journalism
+Informatics Institute
+University of Missouri</div></h3>
+  </section>
+
+  
+<section id="exam-1-prep" class="slide level2">
+<h2>Exam 1 Prep</h2>
+<ul>
+<li>Exam I
+<ul>
+<li>Identify level of measurement (nominal, ordinal, interval, ratio)</li>
+<li>Identify appropriate R class (character/factor, integer, numeric, data.frame)</li>
+<li>Interpret R code/output</li>
+<li>Predict R output</li>
+<li>Calculate [very simple] descriptive statistics</li>
+<li>Select calculated descriptive statistics</li>
+</ul></li>
+</ul>
+</section>
+<section id="levels-of-measurement" class="titleslide slide level1"><h2 class="shout">Levels of measurement</h2></section><section id="level-of-measurement" class="slide level2">
+<h2>Level of measurement</h2>
+<ul>
+<li class="fragment next">A likert-like item on a scale from 1 (strongly disagree) to 7 (strongly agree)
+<ul>
+<li class="fragment next"><strong>interval</strong></li>
+</ul></li>
+<li class="fragment next">The weight of a person (in lbs.)
+<ul>
+<li class="fragment next"><strong>ratio</strong></li>
+</ul></li>
+<li class="fragment next">The order in which horses finished the race
+<ul>
+<li class="fragment next"><strong>ordinal</strong></li>
+</ul></li>
+</ul>
+</section><section id="level-of-measurement-1" class="slide level2">
+<h2>Level of measurement</h2>
+<ul>
+<li class="fragment next">The name of a newspaper
+<ul>
+<li class="fragment next"><strong>nominal</strong></li>
+</ul></li>
+<li class="fragment next">The temperature (in F)
+<ul>
+<li class="fragment next"><strong>interval</strong></li>
+</ul></li>
+<li class="fragment next">The number of times an article says “fake news”
+<ul>
+<li class="fragment next"><strong>ratio</strong></li>
+</ul></li>
+</ul>
+</section><section id="level-of-measurement-2" class="slide level2">
+<h2>Level of measurement</h2>
+<ul>
+<li class="fragment next">Whether a movie is “rotten” or “fresh”
+<ul>
+<li class="fragment next"><strong>nominal</strong></li>
+</ul></li>
+<li class="fragment next">What languages a journalist speaks
+<ul>
+<li class="fragment next"><strong>nominal</strong></li>
+</ul></li>
+<li class="fragment next">How happy someone is on a scale from 1 (not happy) to 10 (very happy)
+<ul>
+<li class="fragment next"><strong>interval</strong></li>
+</ul></li>
+</ul>
+</section><section id="level-of-measurement-3" class="slide level2">
+<h2>Level of measurement</h2>
+<ul>
+<li><strong>interval</strong> A likert-like item on a scale from 1 (strongly disagree) to 7 (strongly agree)</li>
+<li><strong>ratio</strong> The weight of a person (in lbs.)</li>
+<li><strong>ordinal</strong> The order in which horses finished the race</li>
+<li><strong>nominal</strong> The name of a newspaper</li>
+<li><strong>interval</strong> The temperature (in F)</li>
+</ul>
+</section>
+<section id="r-codeoutput" class="titleslide slide level1"><h2 class="shout">R code/output</h2></section><section id="r-output" class="slide level2">
+<h2>R output</h2>
+<p>Predict the output: what is <code>y</code> equal to?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)
+y &lt;-<span class="st"> </span>x <span class="op">-</span><span class="st"> </span><span class="dv">1</span>
+y</code></pre></div>
+<pre><code>a. `0`
+b. `c(0, 1)`
+c. `1`
+d. `c(1, 0)`</code></pre>
+<ul>
+<li class="fragment next"><strong>b</strong></li>
+</ul>
+</section><section id="r-output-1" class="slide level2">
+<h2>R output</h2>
+<p>Predict the output: what is <code>y</code> equal to?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">14</span>, <span class="ot">NA</span>)
+y &lt;-<span class="st"> </span><span class="kw">mean</span>(x)
+y</code></pre></div>
+<pre><code>a. `1.5`
+b. `2.33`
+c. `NA`
+d. `c(1, 2, -5, 2, 0, 14, NA)`</code></pre>
+<ul>
+<li class="fragment next"><strong>c</strong></li>
+</ul>
+</section>
+<section id="r-classes" class="titleslide slide level1"><h2 class="shout">R classes</h2></section><section id="r-class" class="slide level2">
+<h2>R class</h2>
+<p>Predict the output: what class is <code>x</code>?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(1L, 2L, 3L)
+<span class="kw">class</span>(x)</code></pre></div>
+<ul>
+<li class="fragment next"><strong>integer</strong></li>
+</ul>
+</section><section id="r-class-1" class="slide level2">
+<h2>R class</h2>
+<p>Predict the output: what class is <code>x</code>?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.25</span>, <span class="op">-</span><span class="fl">5.26</span>, <span class="dv">2000</span>)
+<span class="kw">class</span>(x)</code></pre></div>
+<ul>
+<li class="fragment next"><strong>numeric</strong></li>
+</ul>
+</section><section id="r-class-2" class="slide level2">
+<h2>R class</h2>
+<p>Predict the output: what class is <code>x</code>?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;1&quot;</span>, <span class="st">&quot;2&quot;</span>, <span class="st">&quot;3&quot;</span>)
+<span class="kw">class</span>(x)</code></pre></div>
+<ul>
+<li class="fragment next"><strong>character</strong></li>
+</ul>
+</section><section id="r-class-3" class="slide level2">
+<h2>R class</h2>
+<p>Predict the output: what class is <code>x</code>?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">data.frame</span>(
+  <span class="dt">x =</span> <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>),
+  <span class="dt">y =</span> <span class="kw">c</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;y&quot;</span>, <span class="st">&quot;z&quot;</span>)
+)
+<span class="kw">class</span>(x)</code></pre></div>
+<ul>
+<li class="fragment next"><strong>data.frame</strong></li>
+</ul>
+</section>
+<section id="descriptives" class="titleslide slide level1"><h2 class="shout">Descriptives</h2></section><section id="descriptive-statistic" class="slide level2">
+<h2>Descriptive statistic</h2>
+<p>Predict the output: What is the standard deviation of x?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">50</span>, <span class="op">-</span><span class="dv">40</span>, <span class="op">-</span><span class="dv">30</span>, <span class="op">-</span><span class="dv">20</span>, <span class="op">-</span><span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)
+<span class="kw">sd</span>(x)</code></pre></div>
+<pre><code>a. 300
+b. -33.17
+c. 50
+d. 33.17</code></pre>
+<ul>
+<li class="fragment next"><strong>d</strong></li>
+</ul>
+</section><section id="descriptive-statistic-1" class="slide level2">
+<h2>Descriptive statistic</h2>
+<p>Predict the output: What is the mode of x?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;c&quot;</span>)
+<span class="kw">sort</span>(<span class="kw">table</span>(x), <span class="dt">decreasing =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>a. a
+b. b
+c. c</code></pre>
+<ul>
+<li class="fragment next"><strong>c</strong></li>
+</ul>
+</section><section id="descriptive-statistic-2" class="slide level2">
+<h2>Descriptive statistic</h2>
+<p>Predict the output: What is the median of x?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">50</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)
+<span class="kw">median</span>(x)</code></pre></div>
+<pre><code>a. -50
+b. -8.8
+c. 0
+d. 1</code></pre>
+<ul>
+<li class="fragment next"><strong>d</strong></li>
+</ul>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="8-examI_files/resources/node_modules/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+    <script>renderMathInElement(document.body);</script>
+  
+  
+</body>
+</html>

@@ -1,0 +1,180 @@
+---
+title: "Week 8"
+subtitle: "Chi-squared test"
+date: "`r Sys.Date()`"
+author: "Michael W. Kearney, PhD"
+institute: |
+  | School of Journalism
+  | Informatics Institute
+  | University of Missouri
+output: 
+  uslides::uslides_html:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = "#>")
+Sys.setenv(
+  USLIDES_BOTTOMLEFT = "uslidelogos/bl.jpg",
+  USLIDES_BOTTOMRIGHT = "uslidelogos/br.jpg",
+  USLIDES_BANNER = "uslidelogos/bn.jpg",
+  USLIDES_BACKGROUND = "uslidelogos/bg.jpg"
+)
+```
+
+# Recap and overview
+
+## Recap
+> + **R**/**Rstudio**: 
+>     - Objects, classes, functions
+> + **Descriptives**
+>     - Central tendency: median, mean, mode
+>     - Dispersion: range, variance, standard deviation
+
+## Due today
++ **Homework \#2** (upload rendered HTML)
+
+## Next week
++ Exam I
+    - Level of measurement (nominal, ordinal, interval, ratio)
+    - R classes (character/factor, integer, numeric, data.frame)
+    - Interpret R code/predict output
+    - Guess or calculate [very simple] descriptive statistics
+
+## Overview
+
++ Big picture: **Chi-squared test** and **t-tests**
++ **Chi-squared test**
++ **t-test**
++ Review for **Exam I**
+
+<!-- ############################################# -->
+<!-- ##              TIDYVERSE                  ## -->
+<!-- ############################################# -->
+
+# **Chi-squared test** and **t-tests**
+
+## Independent/dependent variables
++ Most quantitative research questions and hypotheses should consist of two variables
+    + **Independent** variable (IV): happens first (often assumed to be cause)
+    + **Dependent** variable (DV): happens second (often assumed to be effect)
+
+## Statistical tests
++ **Statistical test** refers a formal comparison between a theoretical model (H/RQ) and observed data, using a priori benchmarks as cutoff points in determining significance
+
+## P values/alpha risk
++ By convention, many researchers judge **p values** (test statistics) of **less than** `.05` as significant
++ **p value** is the probability of observing of observing data given a true null hypothesis
+    + How likely is it that I would have observed this data if the null hypothesis were true?
++ In other words, **p** gives you an estimate for how absurd the data are
+    + Smaller p-values mean the data are more absurd, and thus the null hypothesis is likely wrong
+
+## Chi-squared test
++ Tests the independence of two categorical variables.
+    + **Independent** variable: **categorical**
+    + **Dependent** variable: **categorical**
+
+## T-test
++ Differences between two groups for one variable
+    + **Independent** variable: **categorical**
+    + **Dependent** variable: **interval/ratio** (numeric)
+
+# Chi-squared test
+
+## Chi-squared test
++ **Null Hypopthesis**: Variable $g_{1}$ is independent of variable $g_{2}$
++ **Alternative Hypothesis**: Variable $g_{1}$ is dependent on variable $g_{2}$
+
+## Chi-squared test
++ $H_{0}$: Values of variable $g_{1}$ occur independent of values of $g_{2}$
++ $H_{0}$: Values of variable $g_{1}$ depend on values of variable $g_{2}$
+
+## Chi-squared
+- Goodness of fit test
+
+$$
+ \chi^2 = \sum \frac{(o-e)^{2}}{e}
+$$
+
+
+---
+
+## Chi-squared steps
+1. Make a contingency table
+2. Enter observed frequencies (counts)
+3. Sum by row and column
+4. Calculate expected frequencies
+   a. Column total divided by N times row total
+
+---
+
+## Chi-squared example
+- A poker dealing machine is supposed to deal cards at random, as if
+from an infinite deck. in a test, you counted 1,600 cards, and observed
+the following:
+- Hearts 441
+- Spades 404
+- Diamonds 402
+- Clubs 453
+
+|           | Hearts    | Spades     | Diamonds    | Clubs      |
+|-----------|-----------|------------|-------------|------------|
+| Observed  | 441       | 404        | 402         | 353        |
+
+---
+
+## Chi-squared example
+
+$$ H_{0}: P_{h} = P_{s}  = P_{d}  = P_{c} $$
+
+$$ H_{1}: P_{h} \neq P_{s} \neq P_{d} \neq P_{c} $$
+
+|           | Hearts    | Spades     | Diamonds    | Clubs      |
+|-----------|-----------|------------|-------------|------------|
+| Observed  | 441       | 404        | 402         | 353        |
+| Expected  | 400       | 400        | 400         | 400        |
+
+---
+
+## Chi-squared example
+|           | Hearts    | Spades     | Diamonds    | Clubs      |
+|-----------|-----------|------------|-------------|------------|
+| $o$       | 441       | 404        | 402         | 353        |
+| $e$       | 400       | 400        | 400         | 400        |
+| $o - e$   |  41       |   4        |   2         | -67        |
+
+---
+
+## Chi-squared example
+|           | Hearts    | Spades     | Diamonds    | Clubs      |
+|-----------|-----------|------------|-------------|------------|
+| $o$       | 441       | 404        | 402         | 353        |
+| $e$       | 400       | 400        | 400         | 400        |
+| $o - e$   |  41       |   4        |   2         | -67        |
+| $(o - e)^2$  | 1,681     |  16        |   4         | 2,209      |
+
+---
+
+## Chi-squared example
+|           | Hearts    | Spades     | Diamonds    | Clubs      |
+|-----------|-----------|------------|-------------|------------|
+| $o$       | 441       | 404        | 402         | 353        |
+| $e$       | 400       | 400        | 400         | 400        |
+| $o - e$   |  41       |   4        |   2         | -67        |
+| $(o - e)^2$  | 1,681     |  16        |   4         | 2,209      |
+|$\frac{(o - e)^2}{e}$| 4.20      | 0.04       | 0.01      | 5.52 |
+
+---
+
+## Chi-squared problem
+|           | Hearts    | Spades     | Diamonds    | Clubs      |
+|-----------|-----------|------------|-------------|------------|
+| $o$       | 441       | 404        | 402         | 353        |
+| $e$       | 400       | 400        | 400         | 400        |
+| $o - e$   |  41       |   4        |   2         | -67        |
+| $(o - e)^2$  | 1,681     |  16        |   4         | 2,209      |
+|$\frac{(o - e)^2}{e}$| **4.20**   | **0.04**  | **0.01**  | **5.52** |
+
+
+$$ \chi^2 = 9.77 $$
+
