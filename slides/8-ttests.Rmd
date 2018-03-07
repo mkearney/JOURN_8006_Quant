@@ -9,7 +9,7 @@ institute: |
   | University of Missouri
 output: 
   uslides::uslides_html:
-    self_contained: false
+    self_contained: true
 ---
 
 # t-tests

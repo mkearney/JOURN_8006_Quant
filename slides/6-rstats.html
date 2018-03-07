@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Week 8</title>
+  <title>Week 6</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,13 +21,13 @@
 <body class="shower list">
 
   <header class="caption">
-    <h1>Week 8</h1>
-    <p>Exam I Review: Descriptives</p>
+    <h1>Week 6</h1>
+    <p>#rstats</p>
   </header>
 
   <section class="slide level1 titlepage titleslide">
-    <h2>Week 8</h2>
-    <h2>Exam I Review: Descriptives</h2>
+    <h2>Week 6</h2>
+    <h2>#rstats</h2>
     <h3>Michael W. Kearney, PhD <br> </h3>
     <h3><div style="white-space: pre-line;">School of Journalism
 Informatics Institute
@@ -35,329 +35,160 @@ University of Missouri</div></h3>
   </section>
 
   
-<section id="measures-of-central-tendency" class="titleslide slide level1"><h2 class="shout">Measures of central tendency</h2></section><section id="central-tendency" class="slide level2">
-<h2>Central tendency</h2>
+<section id="recap-and-overview" class="titleslide slide level1"><h2 class="shout">Recap and overview</h2></section><section id="research-designs" class="slide level2">
+<h2>Research designs</h2>
 <ul>
-<li>These statistics describe the <em>center (middle)</em> of a distribution:</li>
-<li>Mode</li>
-<li>Median</li>
-<li>Mean</li>
-<li><em>Which measure is best</em> depends on data type and context.</li>
-</ul>
-</section><section id="mode" class="slide level2">
-<h2>Mode</h2>
+<li class="fragment next"><strong>Surveys</strong>
 <ul>
-<li><em>Mode</em> describes the most common data point.</li>
-<li>The value, response, category, etc. that occurs most frequently.</li>
-<li>Particularly useful when describing categorical, ordinal, or non-normal (skewed) integer data.</li>
-<li>Not useful when dealing with normal, continuous data.</li>
-</ul>
-<p><span class="math display">\[ x = 5.1465, 8.2413, 3.9485, 3.2934 \]</span></p>
-</section><section id="calculating-the-mode" class="slide level2">
-<h2>Calculating the mode</h2>
-<ul>
-<li>To find the mode, create a frequency table (two columns).</li>
-<li>List all possible values on one side (column) and keep a tally (count) of observations for each value on the right side.</li>
-<li>Value with the highest count is the mode &gt; And, yes, it’s possible to have multiple modes</li>
-</ul>
-</section><section id="practice" class="slide level2">
-<h2>Practice</h2>
-<ul>
-<li>Five students took an exam. The scores were</li>
-</ul>
-<p><span class="math display">\[ x = 90, 80, 90, 90, 75 \]</span></p>
-<ul>
-<li>What is the mode of this distribution?</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>Value</th>
-<th>Count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>90</strong></td>
-<td>111</td>
-</tr>
-<tr class="even">
-<td>80</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>75</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-</section><section id="practice-1" class="slide level2">
-<h2>Practice</h2>
-<ul>
-<li>Five students compared shoe sizes. The sizes were</li>
-</ul>
-<p><span class="math display">\[ x = 10, 5, 5, 7, 7 \]</span></p>
-<ul>
-<li>What is the mode of this distribution?</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>Value</th>
-<th>Count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>10</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td><strong>7</strong></td>
-<td>11</td>
-</tr>
-<tr class="odd">
-<td><strong>5</strong></td>
-<td>11</td>
-</tr>
-</tbody>
-</table>
-</section><section id="practice-2" class="slide level2">
-<h2>Practice</h2>
-<ul>
-<li>Five students flip five coins. The side-up coins were heads, heads, heads, tails, tails.</li>
-<li>What is the mode of this distribution?</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>Value</th>
-<th>Count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>heads</strong></td>
-<td>111</td>
-</tr>
-<tr class="even">
-<td>tails</td>
-<td>11</td>
-</tr>
-</tbody>
-</table>
-</section><section id="practice-3" class="slide level2">
-<h2>Practice</h2>
-<ul>
-<li>Five students owned five pets. None of them were elephants.</li>
-<li>What is the mode of this distribution?</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>Value</th>
-<th>Count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Elephant</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>Non-elephant</td>
-<td>5</td>
-</tr>
-</tbody>
-</table>
-</section><section id="median" class="slide level2">
-<h2>Median</h2>
-<ul>
-<li><em>Median</em> describes the mid-point of a distribution.</li>
-<li>The value found at the center (50%) of the data.</li>
-<li>Particularly useful when <strong>describing</strong>—esp skewed—distributions.</li>
-</ul>
-</section><section id="calculating-the-median" class="slide level2">
-<h2>Calculating the median</h2>
-<ul>
-<li>To find the median, create a string of N values ordered from low-to-high or high-to-low.</li>
-<li>If N is odd, report the <strong>one</strong> middle value (it should be equidistant in the number of observations on either side)</li>
-<li>If N is even, find the <strong>two</strong> middle values and report their average</li>
-</ul>
-</section><section id="practice-4" class="slide level2">
-<h2>Practice</h2>
-<ul>
-<li>Five students compared shoe sizes. The sizes were</li>
-</ul>
-<p><span class="math display">\[ x = 10, 5, 5, 7, 7 \]</span></p>
-<ul>
-<li>What is the median of this distribution?</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>1st</th>
-<th>2nd</th>
-<th>3rd</th>
-<th>4th</th>
-<th>5th</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>5</td>
-<td>5</td>
-<td><strong>7</strong></td>
-<td>7</td>
-<td>10</td>
-</tr>
-</tbody>
-</table>
-</section><section id="practice-5" class="slide level2">
-<h2>Practice</h2>
-<ul>
-<li>Ten students completed the exam. Their scores were</li>
-</ul>
-<p><span class="math display">\[ x = 81, 44, 59, 72, 31, 60, 6, 12, 53, 46 \]</span></p>
-<ul>
-<li>What is the median of this distribution?</li>
-</ul>
-</section><section id="section" class="slide level2">
-<h2> </h2>
-<p><span class="math display">\[ x = 81, 44, 59, 72, 31, 60, 6, 12, 53, 46 \]</span></p>
-<table>
-<thead>
-<tr class="header">
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>6</td>
-<td>12</td>
-<td>31</td>
-<td>44</td>
-<td><strong>46</strong></td>
-<td><strong>53</strong></td>
-<td>59</td>
-<td>60</td>
-<td>72</td>
-<td>81</td>
-</tr>
-</tbody>
-</table>
-<p><br> - (46 + 53) / 2 = <strong>49.5</strong></p>
-</section><section id="mean" class="slide level2">
-<h2>Mean</h2>
-<ul>
-<li><em>Mean</em> is the expected value of any given observation assuming no other information is provided.
-<ul>
-<li>Example: let’s say the mean height of KU students is 5’7’’. If we randomly selected one KU student, what would you predict their height to be?</li>
+<li class="fragment next">Good snapshot; hard to get representative sample</li>
 </ul></li>
-<li>We typically think of the mean when we use the word “average.”</li>
-</ul>
-</section><section id="calculating-the-mean" class="slide level2">
-<h2>Calculating the mean</h2>
+<li class="fragment next"><strong>Experiments</strong>
 <ul>
-<li>To calculate the mean of <code>x</code>, sum (add together) all values of <code>x</code> and divide by <code>N</code> (the number of observations). <span class="math display">\[ \mu = \frac{\sum x}{N} \]</span></li>
-</ul>
-</section><section id="practice-6" class="slide level2">
-<h2>Practice</h2>
-<ul>
-<li>Example RQ: How many pets do you have?</li>
-<li>Data: 0, 2, 3, 1, 0, 2 (N = 6)</li>
-</ul>
-<p><span class="math display">\[ \mu = \frac{(0 + 2 + 3 + 1 + 0 + 2)}{6} \]</span></p>
-<p><span class="math display">\[ \mu = \frac{(8)}{6} \]</span></p>
-<p><span class="math display">\[ \mu = \frac{4}{3} \]</span></p>
-</section><section id="practice-7" class="slide level2">
-<h2>Practice</h2>
-<ul>
-<li>Working individually, use the following information to calculate the mean weight of office desks in Bailey 2
-<ul>
-<li>Data (weight of desks in lbs):</li>
+<li class="fragment next">Test for causality; limited to certain IVs</li>
 </ul></li>
-</ul>
-<p><span class="math display">\[ lbs = 50, 125.5, 25.5, 50.5, 8.5 \]</span></p>
-<p><span class="math display">\[ \mu_{desks} = ~~~~~~~~~~ \]</span></p>
-</section><section id="more-practice" class="slide level2">
-<h2>More practice</h2>
+<li class="fragment next"><strong>Content analysis</strong>
 <ul>
-<li>Working with the person next to you (groups of 2), calculate the mean number of days in a month (assuming Gregorian calendar):
-<ul>
-<li>What is the mean number of days for any given month?</li>
+<li class="fragment next">Convert content to numeric data; labour intensive</li>
 </ul></li>
+<li class="fragment next"><strong>Text analysis</strong></li>
 </ul>
-</section><section id="why-know-the-mean" class="slide level2">
-<h2>Why know the mean?</h2>
+</section><section id="due-today" class="slide level2">
+<h2>Due today</h2>
 <ul>
-<li>Because it’s the best predictor of any given observation</li>
-<li>Guessing the mean (instead of the median or mode, for example) should result in the <strong>smallest amount of error</strong>
+<li>Submit the current research question/hypothesis (can be plural) of your thesis/project</li>
+</ul>
+</section><section id="overview" class="slide level2">
+<h2>Overview</h2>
 <ul>
-<li>Error here refers to degree to which an observed value differs from an expected value.</li>
+<li><strong>#rstats</strong>: the R environment
+<ul>
+<li>What is R?</li>
+<li>Why R?</li>
+<li>How does one use R?</li>
 </ul></li>
+<li>Some computing <strong>basics</strong>
+<ul>
+<li>File/directory awareness</li>
+<li>Be kind to future you</li>
+</ul></li>
+<li>Workshop/live R demo</li>
 </ul>
-</section><section id="a-meaningful-example" class="slide level2">
-<h2>A mean[ingful] example</h2>
+</section>
+<section id="what-is-r" class="titleslide slide level1"><h2 class="shout">What is R?</h2></section><section id="r" class="slide level2">
+<h2>R</h2>
 <ul>
-<li>One last example: Let’s say your goal is to get as close as possible to predicting the outcome of a dice roll (two 6-sided dice)</li>
-<li>If reducing the amount of error is any consolation, then guess the mean</li>
-<li>If the only path to victory is guessing the exact outcome, then guess your favorite number.
+<li>R is an <strong>environment</strong>
 <ul>
-<li>Dice roller: <a href="https://www.random.org/dice/" class="uri">https://www.random.org/dice/</a></li>
+<li>An interactive programming language</li>
+<li>Integrates easily with other languages (c, c++, etc.)</li>
+</ul></li>
+<li>The letter <strong>R</strong>
+<ul>
+<li>R was derived from the S language</li>
+<li>It’s an R-bitrary name</li>
 </ul></li>
 </ul>
 </section>
-<section id="measures-of-dispersion" class="titleslide slide level1"><h2 class="shout">Measures of dispersion</h2></section><section id="range" class="slide level2">
-<h2>Range</h2>
+<section id="why-r" class="titleslide slide level1"><h2 class="shout">Why R?</h2></section><section id="r-is-great" class="slide level2">
+<h2>R is gReat!</h2>
 <ul>
-<li><strong>Range</strong> desribes the distance between a distribution’s <strong>maximum</strong> and <strong>minimum</strong> values</li>
-<li>Maximum is the highest/largest observed value</li>
-<li>Minimum is the lowest/smallest observed value</li>
-</ul>
-<p><span class="math display">\[ range = min - max \]</span></p>
+<li>R is <strong>open source</strong>
 <ul>
-<li>The range is often reported along with the maximum and minimum, e.g, the sample consisted of exclusively undergraduates (M age = 21.20, SD = 2.55, range = 18 - 24).</li>
-</ul>
-</section><section id="variability" class="slide level2">
-<h2>Variability</h2>
+<li>It’s free and available to the public</li>
+<li>It’s maintained by a group of benevolent super nerds</li>
+</ul></li>
+<li>R is <strong>flexible</strong>
 <ul>
-<li>Variance refers to the degree to which a distribution <strong>varies</strong></li>
-<li>It’s measured by calculating the distance from the mean for each observation</li>
-<li>When variance is <strong>low</strong>, there is <strong>little change</strong> in data values.</li>
-<li>When variance is <strong>high</strong>, there is <strong>lots of change</strong> in data values.</li>
+<li>Academic origins have expanded to modern/practical applications</li>
+<li>One of the two major data science languages</li>
+</ul></li>
 </ul>
-</section><section id="standard-deviation" class="slide level2">
-<h2>Standard deviation</h2>
+</section><section id="alternatives-to-r" class="slide level2">
+<h2>Alternatives to R</h2>
 <ul>
-<li>The standardized form of variance is referred to as the <strong>standard deviation</strong></li>
-<li>Standard deviations describe the average distance from the mean.</li>
-<li>The mean can be found at <strong>zero</strong> standard deviations from the mean, or the 50% percentile</li>
-<li>For a normal distribution, 95% of the observations should fall within plus or minus 2 standard deviations</li>
-</ul>
-</section><section id="calculating-standard-deviation" class="slide level2">
-<h2>Calculating standard deviation</h2>
+<li>Historically, this class features <strong>SPSS</strong>
 <ul>
-<li>Don’t worry about memorizing this, but it’s useful to see how it works</li>
-</ul>
-<p><span class="math display">\[ s^2 = \sqrt{ \frac{\sum x - \bar{x}}{N - 1}} \]</span></p>
-<p><span class="math display">\[ sd = \sqrt{s^2} \]</span></p>
-</section><section id="easier-standard-deviation-formula" class="slide level2">
-<h2>Easier standard deviation formula</h2>
+<li>SPSS is powerful and seemingly easy to use</li>
+<li>No scripting/coding required</li>
+</ul></li>
+<li>There are downsides to SPSS, too
 <ul>
-<li>There’s a shortcut formula that is useful to know:</li>
+<li>There are <strong>too many</strong> options to remember</li>
+<li>Program defaults not always best</li>
+<li>Data wrangling and non-statistical tasks remain tedious!</li>
+<li>It costs lots of money!</li>
+</ul></li>
 </ul>
-<p><span class="math display">\[ s^2 = \sqrt{\frac{\sum X^2 - \frac{(\sum X)^2}{N}}{N - 1}} \]</span></p>
 </section>
+<section id="how-does-one-use-r" class="titleslide slide level1"><h2 class="shout">How does one use R?</h2></section><section id="installing-r" class="slide level2">
+<h2>Installing R</h2>
+<p><strong>SEE: Instructions on Canvas</strong></p>
+<ul>
+<li>R comes packaged with a GUI (graphical user interface), but <strong>Rstudio</strong> is a friendlier GUI</li>
+<li>So, install R (the engine) but <strong>use</strong> Rstudio (the interface)</li>
+</ul>
+</section><section id="rstudio" class="slide level2">
+<h2>Rstudio</h2>
+<ul>
+<li>Rstudio is a graphical interface (GUI) for R that offers numerous user-friendly features and makes using R a breeze</li>
+<li>Rstudio is developed by people at the cutting edge of data science, but it’s mostly designed for people who don’t use R every day</li>
+</ul>
+</section>
+<section id="computing-basics" class="titleslide slide level1"><h2 class="shout">Computing basics</h2></section><section id="filedirectory-awareness" class="slide level2">
+<h2>File/directory awareness</h2>
+<ul>
+<li>Every computer has a file/directory system</li>
+<li>There’s a default or home folder
+<ul>
+<li>On PCs this might be the “C” folder. On Macs, this is your username.</li>
+</ul></li>
+<li>It’s organized like a tree
+<ul>
+<li>You can move from one branch to another</li>
+<li>Moving from one folder to another is a linear process–meaning, you can go forward and backward</li>
+</ul></li>
+</ul>
+</section><section id="dont-fall-asleep-yet" class="slide level2">
+<h2>Don’t fall asleep yet!</h2>
+<ul>
+<li>Why do you need to know about your computer’s file directory system?</li>
+<li>Because you need to know where things are (i.e., data and script files) to interact with them</li>
+</ul>
+</section><section id="tldr" class="slide level2">
+<h2>tl;dr</h2>
+<ul>
+<li>Open your file browser. See how the files are organized? Yeah? Good!</li>
+</ul>
+</section><section id="dont-let-these-terms-confuse-you" class="slide level2">
+<h2>Don’t let these terms confuse you</h2>
+<ul>
+<li><code>File</code> is the <strong>name</strong>/location of a file</li>
+<li><code>Path</code> is the name/<strong>location</strong> of a file</li>
+<li><code>Folder</code> is the <strong>name</strong>/location of a file folder</li>
+<li><code>Directory</code> is the name/<strong>location</strong> of a file folder</li>
+</ul>
+<p class="note">
+file == path &amp; folder == directory
+</p>
+</section>
+<section id="be-kind-to-future-you" class="titleslide slide level1"><h2 class="shout">Be kind to future you</h2></section><section id="the-golder-rule" class="slide level2">
+<h2>The goldeR rule</h2>
+<blockquote>
+<p>do unto others as you would have them do unto you</p>
+</blockquote>
+<ul>
+<li>Do unto your future self way better than that!</li>
+</ul>
+</section><section id="future-you" class="slide level2">
+<h2>FutuRe you</h2>
+<ul>
+<li>Using scripts and writing clear code will make your life easier</li>
+<li>It’s like writing down a routine of pointing and clicking that you don’t have to memorize</li>
+<li>The internet is full of routines/scripts that you can edit and customize to your liking</li>
+<li>With some notes and some extra attention paid to make sure things are clear, future you will be very happy with current you!</li>
+</ul>
+</section>
+<section id="live-r-demo" class="titleslide slide level1"><h2 class="shout">Live R demo</h2></section></section>
 
   <!--
   To hide progress bar from entire presentation

@@ -9,7 +9,7 @@ institute: |
   | University of Missouri
 output: 
   uslides::uslides_html:
-    self_contained: false
+    self_contained: true
 ---
 
 ```{r setup, include=FALSE}
@@ -64,7 +64,7 @@ Sys.setenv(
 
 ## P values/alpha risk
 + By convention, many researchers judge **p values** (test statistics) of **less than** `.05` as significant
-+ **p value** is the probability of observing of observing data given a true null hypothesis
++ **p value** is the probability of observing data given a true null hypothesis
     + How likely is it that I would have observed this data if the null hypothesis were true?
 + In other words, **p** gives you an estimate for how absurd the data are
     + Smaller p-values mean the data are more absurd, and thus the null hypothesis is likely wrong
@@ -82,12 +82,12 @@ Sys.setenv(
 # Chi-squared test
 
 ## Chi-squared test
-+ **Null Hypopthesis**: Variable $g_{1}$ is independent of variable $g_{2}$
++ **Null Hypothesis**: Variable $g_{1}$ is independent of variable $g_{2}$
 + **Alternative Hypothesis**: Variable $g_{1}$ is dependent on variable $g_{2}$
 
 ## Chi-squared test
 + $H_{0}$: Values of variable $g_{1}$ occur independent of values of $g_{2}$
-+ $H_{0}$: Values of variable $g_{1}$ depend on values of variable $g_{2}$
++ $H_{1}$: Values of variable $g_{1}$ depend on values of variable $g_{2}$
 
 ## Chi-squared
 - Goodness of fit test
@@ -115,7 +115,7 @@ the following:
 - Hearts 441
 - Spades 404
 - Diamonds 402
-- Clubs 453
+- Clubs 353
 
 |           | Hearts    | Spades     | Diamonds    | Clubs      |
 |-----------|-----------|------------|-------------|------------|
