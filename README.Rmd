@@ -11,9 +11,21 @@ View [the course syllabus](syllabus/syllabus.md) or download the [pdf](syllabus/
 ## IRB training
 Students must receive IRB certification for Social Behavioral Research. See: [instructions for completing IRB training](irb_training/instructions.md).
 
-## Slides
-1. [Intro to quant](slides/1-intro-to-quant.pdf)
-2. [Variables](slides/2-variables.pdf)
+## Installing R/Rstudio
+Guide to [downloading R and Rsstudio](download-R-and-Rstudio/download-R-and-rstudio.Rmd)
+
+## FAQ
+Answers to [frequently asked questions](FAQ.md)
+
+## Slides (Rmd files)
+1. [Quant Research](slides/1-intro-to-quant.Rmd)
+2. [Variables](slides/2-variables.Rmd), [Abstracts](slides/2-abstracts.Rmd)
+3. **Surveys** (no slides)
+4. [Experiments](slides/experiments.Rmd)
+5. [Content/Text Analysis](slides/5-content-analysis.Rmd)
+6. [\#rstats](slides/6-rstats.Rmd)
+7. [Descriptives](slides/7-descriptives.Rmd), [Rmarkdown](slides/7-rmarkdown.Rmd)
+8. [Chi-Squared test](slides/8-chisquare.Rmd), [Exam I Review (supplemental)](slides/8-examI-descriptives.Rmd), [Exam I Review](slides/8-examI.Rmd), [t-tests](slides/8-ttests.Rmd)
 
 ## Texts
 - [*Mass Media Research: An Introduction*](https://www.amazon.com/dp/143908274X/) by Roger D. Wimmer and Joseph R. Dominick. [See chapter outline](books/mass_media_outline.md)
