@@ -1,0 +1,182 @@
+---
+title: "Week 10"
+subtitle: "Correlations"
+author: "Michael W. Kearney📊<br/>School of Journalism <br/>Informatics Institute <br/>University of Missouri"
+date: "<table style=\"border-style:none;padding-top:30px;\" class=\".table\">
+  <tr>
+    <th style=\"padding-right:75px!important\"><a href=\"https://twitter.com/kearneymw\"> <i class=\"fa fa-twitter\"></i> </a></th>
+    <th style=\"padding-left:75px!important\"><a href=\"https://github.com/mkearney\"> <i class=\"fa fa-github\"></i> </a></th>
+  </tr>
+  <tr style=\"background-color:#fff\">
+    <th style=\"padding-right:75px!important\"><a href=\"https://github.com/mkearney\"> @kearneymw </a></th>
+    <th style=\"padding-left:75px!important\"><a href=\"https://github.com/mkearney\"> @mkearney </a></th>
+  </tr></table>"
+output:
+  xaringan::moon_reader:
+    css: ['robot', 'robot-fonts']
+    self_contained: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, collapse = TRUE, comment = ">")
+options(htmltools.dir.version = FALSE)
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+head <- function(x, n = 6) {
+  x <- utils::head(x, n)
+  knitr::kable(x, format = "html")
+}
+```
+
+# \#rstats
+
+Visualizations and data wrangling done using the [tidyverse](https://tidyverse.org).
+
++ **{ggplot2}**: data visualizations
++ **{dplyr}**: data wrangling
+
+```{r}
+## load the tidyverse
+library(tidyverse)
+```
+
+---
+
+# Correlation
+
+A **correlation** describes how variation in one variable relates to variation in another variable. 
+
+In statistics, correlations describe the **magnitude** and **direction** of a relationship between two variables. 
+
+
+---
+
+```{r}
+## 20 observations from random normal distribution
+x <- rnorm(20)
+## x + 20 observations from random normal distribution
+y <- rnorm(20) + x
+## scatter plot
+plot(x, y)
+```
+
+---
+
+# Correlation coefficient
+
+In statistics, a **coefficient** refers to a numeric estimate.
+
+A **correlation coefficient** `r` is a number that describes a correlation.
+
+There are several types of correlation coefficients but they all tend to assume the following:
+
++ The **range of possible values** goes from -1 to +1
++ **Direction** is described by the sign of the coefficient (negative = negative relationship and vice versa)
++ **Magnitude** is described by the coefficient's distance from zero
+    + A correlation of zero indicates an absence of correlation (no relationship)
+
+---
+
+# Types of correlations
+
+**Pearson product-moment**: linear relationship between two variables 
+$$x\sim\sim y$$
+
+**Spearman's rho**: relationship between rankings of two variables 
+$$x\sim\sim y$$
+
+**Intraclass**: relationship between paired observations 
+$$x_{t1}\sim\sim x_{t2}$$
+
+---
+
+# Semester
+
+All of the correlations are similar, but you can assume when I talk about correlations I'm talking about the Pearson product-moment correlation.
+
+When your variables are ordinal (ordered categories), it's important to remember there's a better way to estimate the correlation coefficient.
+
+---
+
+# Interval/ratio data
+
+```{r}
+## 20 observations from random normal distribution
+x <- rnorm(20)
+## x + 20 observations from random normal distribution
+y <- rnorm(20) + x
+## create data frame
+df <- data.frame(x, y)
+
+## print
+head(df)
+```
+
+
+
+---
+
+# Ordinal data
+
+```{r}
+## sample twenty values from numbers 1,2,3,4,5,6
+x <- sample(c(1, 2, 3, 4, 5, 6), 20, replace = TRUE)
+## sample twenty more, add them with x, and then divide by 2
+y <- round((x + sample(c(1, 2, 3, 4, 5, 6), 20, replace = TRUE)) / 2, 0)
+## create data frame
+df_ordered <- data.frame(x, y)
+
+## print
+head(df_ordered)
+```
+
+
+---
+
+# `cor(method = "pearson")`
+
+By default, `cor()` returns the Pearson product-moment correlation.
+
+```{r}
+## using cor defaults
+cor(df$x, df$y)
+```
+
+Use `method` to specify the type of correlation and `use` to deal with missing data
+
+```{r}
+## pearson product-moment correlation
+cor(df$x, df$y, method = "pearson", use = "complete.obs")
+```
+
+---
+
+# `cor(method = "spearman")`
+
+```{r}
+## pearson product-moment correlation
+cor(df_ordered$x, df$y, method = "pearson", use = "complete.obs")
+
+## spearman rho correlation
+cor(df_ordered$x, df$y, method = "spearman", use = "complete.obs")
+```
+
+
+---
+
+# Correlation tool
+
+To visualize correlations of different values (-1 to 1) check out this Shiny app I made: 
+
++ https://mikewk.shinyapps.io/correlation/
+
+`---
+# Practice
+
+Guess the correlation coefficient (the game):
+
++ http://guessthecorrelation.com/
+

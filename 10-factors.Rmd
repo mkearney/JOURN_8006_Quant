@@ -1,0 +1,109 @@
+---
+title: "Week 10"
+subtitle: "Factors"
+author: "Michael W. Kearney📊<br/>School of Journalism <br/>Informatics Institute <br/>University of Missouri"
+date: "<table style=\"border-style:none;padding-top:30px;\" class=\".table\">
+  <tr>
+    <th style=\"padding-right:75px!important\"><a href=\"https://twitter.com/kearneymw\"> <i class=\"fa fa-twitter\"></i> </a></th>
+    <th style=\"padding-left:75px!important\"><a href=\"https://github.com/mkearney\"> <i class=\"fa fa-github\"></i> </a></th>
+  </tr>
+  <tr style=\"background-color:#fff\">
+    <th style=\"padding-right:75px!important\"><a href=\"https://github.com/mkearney\"> @kearneymw </a></th>
+    <th style=\"padding-left:75px!important\"><a href=\"https://github.com/mkearney\"> @mkearney </a></th>
+  </tr></table>"
+output:
+  xaringan::moon_reader:
+    css: ['robot', 'robot-fonts']
+    self_contained: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, collapse = TRUE, comment = ">")
+options(htmltools.dir.version = FALSE)
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+head <- function(x, n = 6) {
+  x <- utils::head(x, n)
+  knitr::kable(x, format = "html")
+}
+```
+
+# \#rstats
+
+Visualizations and data wrangling done using the [tidyverse](https://tidyverse.org).
+
++ **{ggplot2}**: data visualizations
++ **{dplyr}**: data wrangling
+
+```{r}
+## load the tidyverse
+library(tidyverse)
+```
+
+---
+
+# Factor
+
+A **factor** is a psychometric term for variable. 
+
+In statistics, factors describe the **latent** variables which we are attempting to measure. 
+
+
+---
+
+# Items
+
+An **item** refers to a single question/prompt/response-provoking stimulus in a questionnaire.
+
+In the context of a study, a **variable** refers to a construct (or factor) to be examined.
+
+Variables can consist of one or more items from a questionnaire.
+
+
+---
+
+# Multi-item variables
+
+When a variable (or factor) is measured using multiple items, we still want to represent it with one number.
+
+**How can we represent a variable measured with 5 likert-type items using one number per observation (respondent)?**
+
+
+---
+
+# Example
+
+Our variable of interest is extraversion/introversion. We measure it using four likert-type items:
+
++ I like talking to lots of people
++ I like attending events where I meet knew people
++ I am comfortable at a party where I don't know anyone else
++ Meeting my friends' friends makes me nervous
+
+
+---
+
+# Example responses
+
+```{r}
+## first person's responses
+person1 <- c(1, 2, 1, 7)
+
+## second person's responses
+person2 <- c(6, 6, 5, 2)
+```
+
+
+---
+
+# Factor analysis
+
+To make sure we have **reliable** measures, we use factor analysis.
+
+**Factor analysis** essentially finds the correlation between responses for similar items. 
+
+There are lots of details and variations, but knowing this much will help you in the future!
+
