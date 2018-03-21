@@ -1,6 +1,5 @@
 
-JOURN\_8006\_Quant
-------------------
+<img src="aes/journ8006-canvas-banner.png" width="100%" />
 
 Course repository for *JOURN 8006: Quantitative Research Methods in Journalism*, a graduate course in the Missouri School of Journalism.
 
