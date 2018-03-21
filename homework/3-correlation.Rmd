@@ -1,0 +1,88 @@
+---
+title: "Homework #2"
+subtitle: "JOURN 8006"
+author: "\\<enter your name here>"
+date: "3/06/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = "#>")
+```
+
+For this homework assignment, we will use the same data as the prevoius homwork assignment. So, create a new folder and save the `3-correlation.Rmd` and `2-data.csv` files in it.
+
+## Data
+
+Read in the data file (`2-data.csv`) using the code below.
+
+```{r}
+## read data into R
+df <- read.csv("2-data.csv", stringsAsFactors = FALSE)
+
+## preview first six rows of data
+head(df)
+```
+
+The data set `df` contains seven variables:
+
+- `age`: Age of the respondent
+- `race`: Race of the respondent
+- `sex`: Sex of the respondent
+- `polar`: Affective political polarization (favorability of in-group `-` favoriability of out-group where the groups are D and R political parties)
+- `sm_use`: Social media use (extent to which respondent uses social media)
+- `network_agree`: Network agreement (extent to which social media networks are politically like-minded)
+- `pp`: Political participation (number of political activities engaged in the past 6 months)
+
+## Instructions
+Respond to the following three prompts by entering the appropriate code or text below each.
+
+## Prompts
+
+### What's the correlation between `sm_use` and `network_agree`
+
+```{r}
+## your code goes here
+
+```
+
+### Plot the correlation between `sm_use` and `network_agree`
+
+```{r}
+## your code goes here
+
+```
+
+
+### What is the correlation between `polar` and `pp`
+
+```{r}
+## your code goes here
+
+```
+
+
+### Plot the correlation between `polar` and `pp`
+
+```{r}
+## your code goes here
+
+```
+
+
+### Using the code below, answer the following three questions about the correlation between the weight and mpg of cars (using the mtcars data set).
+#### a) What is your guess for the `r` value?
+#### b) Is the relationship positive or negative?
+#### c) Is the relationship strong or weak?
+
+```{r}
+## load ggplot2
+library(ggplot2)
+
+## scatter plot of mpg by wt
+ggplot(mtcars, aes(x = wt, y = mpg)) + 
+  geom_point()
+```
+
+
+

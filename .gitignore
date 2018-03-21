@@ -3,3 +3,4 @@ make
 make.R
 resources/**
 .Rproj.user
+exams/**

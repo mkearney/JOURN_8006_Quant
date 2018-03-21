@@ -14,7 +14,7 @@ date: "<table style=\"border-style:none;padding-top:30px;\" class=\".table\">
 output:
   xaringan::moon_reader:
     css: ['robot', 'robot-fonts']
-    self_contained: false
+    self_contained: true
     nature:
       highlightStyle: github
       highlightLines: true
