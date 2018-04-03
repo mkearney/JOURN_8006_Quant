@@ -37,7 +37,7 @@ Review](slides/8-examI.Rmd), [t-tests](slides/8-ttests.Rmd)
 9. **Exam I** (no slides)
 10. [Correlations](slides/10-correlation.Rmd), [Factors](slides/10-factors.Rmd)
 11. **Spring Break** (no slides)
-12. [Correlations](slides/12-glm.Rmd)
+12. [General linear model](slides/12-lm.Rmd)
 
 ## Texts
 - [*Mass Media Research: An
