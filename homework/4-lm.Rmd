@@ -1,0 +1,94 @@
+---
+title: "Homework #4"
+subtitle: "JOURN 8006"
+author: "\\<enter your name here>"
+date: "4/06/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = "#>")
+```
+
+For this homework assignment, we will a new data set. So, create a new folder and save the `4-lm.Rmd` and `4-data.csv` files in it.
+
+## Data
+
+Read in the data file (`2-data.csv`) using the code below.
+
+```{r}
+## read data into R
+df <- read.csv("4-data.csv", stringsAsFactors = FALSE)
+
+## preview first six rows of data
+head(df)
+```
+
+The data set `df` contains six variables:
+
+- `total_bill`: Total cost of restaurant bill
+- `tip`: Amount of tip
+- `sex`: Sex of customer (Female, Male)
+- `smoker`: Whether customer is a smoker
+- `day`: Day of the week (Fri, Sat, Sun, Thur)
+- `time`: Meal of the day (Dinner, Lunch)
+- `size`: Number of people in party
+
+## Instructions
+Respond to the following three prompts by entering the appropriate code or text below each.
+
+## Prompts
+
+### MODEL 1
+
+#### a. Write the formula for a model predicting `tips` (outcome) by `total_bill` (predictor)
+
+```{r}
+## your code goes inside the parentheses in the line below
+f1 <- formula()
+```
+
+#### b. Estimate a model using formula `f1` and data `df`. Store the output as `m1`.
+
+```{r}
+## your code goes inside the parentheses in the line below
+m1 <- lm()
+```
+
+#### c. Summarize `m1`
+
+```{r}
+## your code goes here
+
+```
+
+### MODEL TWO
+
+#### a. Write the formula for a model predicting `tips` (outcome) by `total_bill`, `sex`, `smoker`, `day`, `time`, `size` (predictors).
+
+```{r}
+## your code goes inside the parentheses in the line below
+f2 <- formula()
+```
+
+#### b. Estimate a model using formula `f2` and data `df`. Store the output as `m2`.
+
+```{r}
+## your code goes inside the parentheses in the line below
+m2 <- lm()
+```
+
+
+#### c. Summarize `m2`
+
+```{r}
+## your code goes here
+
+```
+
+#### d. Which variables were significant predictors of `tips`? And were the significant predictors positive or negative?
+
+<!-- write your answer here -->
+
+
+
