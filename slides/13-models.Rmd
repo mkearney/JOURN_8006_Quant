@@ -418,13 +418,17 @@ summary(m4)
 
 ---
 
+# Better idea
+
 Calculate mean of `x1` `x2` `x3`
 
 ```{r}
 pd$ind <- (pd$x1 + pd$x2 + pd$x3) / 3
 ```
 
-Then model using aggregated variable
+---
+
+# ind
 
 ```{r, eval=FALSE}
 m5 <- lm(dem ~ ind, data = pd)
@@ -448,7 +452,4 @@ summary(m5)
 > Multiple R-squared:  0.1459,    Adjusted R-squared:  0.1342 
 > F-statistic: 12.47 on 1 and 73 DF,  p-value: 0.0007209
 ```
-
-
-
 

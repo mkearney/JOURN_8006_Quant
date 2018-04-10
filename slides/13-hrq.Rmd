@@ -37,25 +37,63 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 
 ---
 
+# Parameters
+
+**Unit of analysis**: the level, or description, at which observation occurs (e.g., people, news articles, news organizations, countries, etc.)
+
+**Dependent (outcome) variable**: variable to be predicted; often assumed to be the "effect"
+
+**Independent (predictor) variable**: variable used to make prediction; often assumed to be the "cause"
+
+**Control (covariate) variable(s)**: variable(s) to include in model as controls–not explicit in hypothesis (only include if they make sense)
+
+**Statistical test**: one of the statitical methods covered this semester
+
+---
+
+# Statistical tests
+
+**chi-square** compare observed frequencies of two categorical variables
+
+**t-test** compare two groups on a continuous variable
+
+**Correlation** non-causal relationship between two continuous variables
+
+**Regression** linear model with one or more continuous predictors
+
+**ANOVA** linear model with only categorical predictors
+
+---
+
 # 1.
 
 Humorous ads will be shared with others more often than non-humorous ads.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
 
 ---
 
 # 2.
 
-Elite media and lobby groups will employ more similar frames when the salience of the issue is low. 
+Elite media and lobby groups will employ more similar frames when the salience of the issue is low.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
 
 ---
 
@@ -63,10 +101,15 @@ Elite media and lobby groups will employ more similar frames when the salience o
 
 States with more diverse newspaper ownership will tend to have more diverse topics in their newspapers.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
 
 ---
 
@@ -74,10 +117,15 @@ States with more diverse newspaper ownership will tend to have more diverse topi
 
 Perceptions of social minorities are negatively affected by exposure to coverage from the political out-group.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
 
 ---
 
@@ -85,10 +133,15 @@ Perceptions of social minorities are negatively affected by exposure to coverage
 
 Women who use Facebook for socializing will be more likely to use Facebook for birth control recommendations.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
 
 ---
 
@@ -96,10 +149,15 @@ Women who use Facebook for socializing will be more likely to use Facebook for b
 
 Social media posts with media attachments will receive more engagements than those without.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
 
 ---
 
@@ -107,10 +165,15 @@ Social media posts with media attachments will receive more engagements than tho
 
 Social media use will be positively related to use of filters on Instagram.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
 
 ---
 
@@ -118,10 +181,15 @@ Social media use will be positively related to use of filters on Instagram.
 
 The share of animal conservation news stories about pandas is positively related to the amount of funds raised on behalf of the giant panda.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
 
 ---
 
@@ -129,10 +197,15 @@ The share of animal conservation news stories about pandas is positively related
 
 Journalists exposed to definitions of climate change-related terms are less likely to misinterpret climate change research than journalists who are not.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
 
 ---
 
@@ -140,10 +213,15 @@ Journalists exposed to definitions of climate change-related terms are less like
 
 Exposure to more well-known conservative characters in the media is positively related to exposure to conservative news.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
 
 ---
 
@@ -151,10 +229,15 @@ Exposure to more well-known conservative characters in the media is positively r
 
 Similarity in frames used by think tanks and academic professors will be greater among climate change skeptics than it will among non-skeptics.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
 
 ---
 
@@ -162,10 +245,15 @@ Similarity in frames used by think tanks and academic professors will be greater
 
 Journalists will be more likely to perceive affordances in The New York Times' online coverage of Hurricane Harvey as more interactive than will non-journalists.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
 
 ---
 
@@ -173,7 +261,12 @@ Journalists will be more likely to perceive affordances in The New York Times' o
 
 U.S. national news media will cover female politicians in Western Europe more positively than female politicians in the United States.
 
-+ **Unit of analysis**: 
-+ **Independent variable**:
-+ **Dependent variable**:
-+ **Statistical test**:
+**Unit of analysis**:
+
+**Dependent (outcome) variable**:
+
+**Independent (predictor) variable**:
+
+**Control (covariate) variable(s)**:
+
+**Statistical test**:
