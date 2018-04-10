@@ -1,0 +1,179 @@
+---
+title: "Week 13"
+subtitle: "Project Hypotheses"
+author: "Michael W. Kearney📊<br/>School of Journalism <br/>Informatics Institute <br/>University of Missouri"
+date: "<table style=\"border-style:none;padding-top:30px;\" class=\".table\">
+  <tr>
+    <th style=\"padding-right:75px!important\"><a href=\"https://twitter.com/kearneymw\"> <i class=\"fa fa-twitter\"></i> </a></th>
+    <th style=\"padding-left:75px!important\"><a href=\"https://github.com/mkearney\"> <i class=\"fa fa-github\"></i> </a></th>
+  </tr>
+  <tr style=\"background-color:#fff\">
+    <th style=\"padding-right:75px!important\"><a href=\"https://github.com/mkearney\"> @kearneymw </a></th>
+    <th style=\"padding-left:75px!important\"><a href=\"https://github.com/mkearney\"> @mkearney </a></th>
+  </tr></table>"
+output:
+  xaringan::moon_reader:
+    css: ['robot', 'robot-fonts']
+    self_contained: true
+    keep_md: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+# Projects
+
+**Items**: Using the research questions/hypotheses you uploaded to Canvas, I came up with a list of 13 hypotheses (in every instance; I modified the uploaded RQ/H).
+
+**Task**: describe the unit of analysis, independent variable, dependent variable, and appropriate statistical test.
+
+**Submit**: write these down on a piece of paper and submit the completed paper at the end of class. This will count as your final homework assignment.
+
+---
+
+# 1.
+
+Humorous ads will be shared with others more often than non-humorous ads.
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
+
+---
+
+# 2.
+
+Elite media and lobby groups will employ more similar frames when the salience of the issue is low. 
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
+
+---
+
+# 3.
+
+States with more diverse newspaper ownership will tend to have more diverse topics in their newspapers.
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
+
+---
+
+# 4.
+
+Perceptions of social minorities are negatively affected by exposure to coverage from the political out-group.
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
+
+---
+
+# 5.
+
+Women who use Facebook for socializing will be more likely to use Facebook for birth control recommendations.
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
+
+---
+
+# 6.
+
+Social media posts with media attachments will receive more engagements than those without.
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
+
+---
+
+# 7.
+
+Social media use will be positively related to use of filters on Instagram.
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
+
+---
+
+# 8.
+
+The share of animal conservation news stories about pandas is positively related to the amount of funds raised on behalf of the giant panda.
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
+
+---
+
+# 9.
+
+Journalists exposed to definitions of climate change-related terms are less likely to misinterpret climate change research than journalists who are not.
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
+
+---
+
+# 10.
+
+Exposure to more well-known conservative characters in the media is positively related to exposure to conservative news.
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
+
+---
+
+# 11.
+
+Similarity in frames used by think tanks and academic professors will be greater among climate change skeptics than it will among non-skeptics.
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
+
+---
+
+# 12.
+
+Journalists will be more likely to perceive affordances in The New York Times' online coverage of Hurricane Harvey as more interactive than will non-journalists.
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
+
+---
+
+# 13.
+
+U.S. national news media will cover female politicians in Western Europe more positively than female politicians in the United States.
+
++ **Unit of analysis**: 
++ **Independent variable**:
++ **Dependent variable**:
++ **Statistical test**:
