@@ -43,6 +43,8 @@ Answers to [frequently asked questions](FAQ.md)
     [Factors](slides/10-factors.Rmd)
 11. **Spring Break** (no slides)
 12. [General linear model](slides/12-lm.Rmd)
+13. [Advanced models](slides/13-models.Rmd), [Project
+    Hypotheses](slides/13-hrq.Rmd)
 
 ## Texts
 
