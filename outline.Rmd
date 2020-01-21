@@ -1,0 +1,33 @@
+---
+title: "Outline"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Outline
+
+## Operationalization
+* Variable
+   + Conceptual definition
+   + Operational definition
+
+* Measurement
+   + Self-report
+   + Observation
+   + Annotation
+
+* Research values
+   + Validity
+      - External validity
+      - Internal validity
+      - Construct validity
+      - Statistical validity
+   + Reliability
+      - test-retest
+      - inter-rater
+      - alpha reliability
+      - split-half reliability
+
